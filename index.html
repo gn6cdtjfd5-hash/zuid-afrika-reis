@@ -1,0 +1,1229 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<title>Zuid Afrika 2026</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: reisdagboek op één kolom, navy kop als nachtelijke bushhemel, kaart als landkaart op zandpapier */
+  :root{
+    --bg:#f8f5ef; --surface:#ffffff; --surface-2:#f1ebe1; --line:#e3dacb;
+    --fg:#1a1f33; --muted:#5d6377; --navy:#0a1749; --on-navy:#ffffff; --on-navy-muted:#c7cbe0;
+    --sand:#baa182; --sand-ink:#7a6346; --accent:#0a1749;
+    --land:#efe6d6; --land-za:#e2d3bb; --land-line:#c9b79c; --sea:#dfe7ee;
+    --ok-bg:#e3f1e8; --ok-fg:#1f6b43; --res-bg:#e8ecfa; --res-fg:#0a1749; --q-bg:#fbeede; --q-fg:#93540f;
+    --note-bg:#fbf6ee; --warn-bg:#fdf0e8; --warn-line:#c8662b;
+    --ph-joburg:#0a1749; --ph-safari:#9a6b2f; --ph-tuin:#2f7a5a; --ph-karoo:#b4632d; --ph-walvis:#2b6c9e; --ph-wijn:#7a2e4a; --ph-kaap:#0a1749;
+    --font-display:"Fraunces",Georgia,"Times New Roman",serif;
+    --font-body:"Libre Franklin",-apple-system,"Segoe UI",Roboto,sans-serif;
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+    --bg:#0d1226; --surface:#151b35; --surface-2:#1b2242; --line:#2a3255;
+    --fg:#eef0f7; --muted:#a3a9c2; --navy:#070e30; --on-navy:#ffffff; --on-navy-muted:#b9bed6;
+    --sand:#c9b08f; --sand-ink:#d9c3a3; --accent:#c9b08f;
+    --land:#1a2142; --land-za:#26305a; --land-line:#3a4472; --sea:#111833;
+    --ok-bg:#163a28; --ok-fg:#8fd8ae; --res-bg:#202b5a; --res-fg:#c9d3ff; --q-bg:#3f2d14; --q-fg:#f2c27f;
+    --note-bg:#1d2340; --warn-bg:#3a2216; --warn-line:#e08a52;
+    --ph-joburg:#8ea0e6; --ph-safari:#d29a52; --ph-tuin:#5fbf93; --ph-karoo:#e08a52; --ph-walvis:#6aaee0; --ph-wijn:#d07799; --ph-kaap:#8ea0e6;
+    color-scheme:dark }}
+  :root[data-theme="dark"]{
+    --bg:#0d1226; --surface:#151b35; --surface-2:#1b2242; --line:#2a3255;
+    --fg:#eef0f7; --muted:#a3a9c2; --navy:#070e30; --on-navy:#ffffff; --on-navy-muted:#b9bed6;
+    --sand:#c9b08f; --sand-ink:#d9c3a3; --accent:#c9b08f;
+    --land:#1a2142; --land-za:#26305a; --land-line:#3a4472; --sea:#111833;
+    --ok-bg:#163a28; --ok-fg:#8fd8ae; --res-bg:#202b5a; --res-fg:#c9d3ff; --q-bg:#3f2d14; --q-fg:#f2c27f;
+    --note-bg:#1d2340; --warn-bg:#3a2216; --warn-line:#e08a52;
+    --ph-joburg:#8ea0e6; --ph-safari:#d29a52; --ph-tuin:#5fbf93; --ph-karoo:#e08a52; --ph-walvis:#6aaee0; --ph-wijn:#d07799; --ph-kaap:#8ea0e6;
+    color-scheme:dark }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(60px + env(safe-area-inset-top,0px))}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--font-body);-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.15;margin:0;text-wrap:balance}
+  a{color:var(--accent)}
+  a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--sand);outline-offset:2px}
+  .wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+  .hero{background:var(--navy);color:var(--on-navy);padding-block:26px 22px}
+  .hero .wrap{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 20px}
+  .eyebrow{letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:var(--sand);font-weight:600}
+  .hero h1{font-size:clamp(34px,6vw,52px);margin:6px 0 0}
+  .hero .lead{font-size:17px;color:var(--on-navy-muted);max-width:60ch;margin:0 0 22px}
+  .stats{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:16px;font-variant-numeric:tabular-nums}
+  .stat b{font-family:var(--font-display);font-size:22px;font-weight:600}
+  .stat span{font-size:14px;color:var(--muted);margin-left:6px}
+  .countdown{display:inline-flex;align-items:center;gap:8px;background:var(--sand);color:#0a1749;border-radius:999px;padding:8px 16px;font-weight:700;font-size:15px;text-decoration:none}
+
+  nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+  nav.top .wrap{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-block:10px}
+  nav.top .wrap::-webkit-scrollbar{display:none}
+  nav.top a{white-space:nowrap;text-decoration:none;color:var(--fg);font-weight:600;font-size:14px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+  nav.top a:hover{border-color:var(--sand)}
+  nav.top a.on{background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+
+  section{padding-block:28px 4px}
+  .backbtn{display:inline-flex;margin-top:26px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px;background:var(--surface);color:var(--fg)}
+  .backbtn:hover{border-color:var(--sand)}
+  .sumgrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:14px;margin-bottom:22px}
+  .next h3{font-size:22px;margin:4px 0 4px}
+  .next .where{color:var(--muted);font-size:14px;margin-bottom:10px}
+  .next .go{display:inline-flex;margin-top:10px;font-weight:700;text-decoration:none;background:var(--sand);color:#0a1749;border-radius:999px;padding:7px 14px;font-size:14px}
+  .moments{list-style:none;margin:0;padding:0}
+  .moments li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;padding:7px 0;border-top:1px dashed var(--line);font-size:14.5px}
+  .moments li:first-child{border-top:0}
+  .moments .md{font-weight:700;font-variant-numeric:tabular-nums;font-size:13.5px}
+  .moments a{color:inherit;text-decoration:none}
+  .moments a:hover .mt{text-decoration:underline}
+  .moments .mt small{display:block;color:var(--muted);font-size:13px}
+  .quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:4px}
+  .quick div{background:var(--surface-2);border-radius:10px;padding:10px 12px;min-width:0}
+  .quick span{display:block;font-size:12.5px;color:var(--muted)}
+  .quick b{display:block;font-variant-numeric:tabular-nums;user-select:all}
+  @media (max-width:820px){.sumgrid,.quick{grid-template-columns:minmax(0,1fr)}}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px 16px;margin-bottom:16px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(26px,4vw,32px)}
+  .sec-head p{margin:0;color:var(--muted);font-size:15px}
+
+  /* Kaart */
+  .route-grid{display:block;max-width:760px}
+  .tag.reach{font-weight:700}
+  .tag.reach .k{color:inherit;opacity:.75}
+  .tag.r-goed{background:var(--ok-bg);color:var(--ok-fg);border-color:transparent}
+  .tag.r-beperkt{background:var(--q-bg);color:var(--q-fg);border-color:transparent}
+  .tag.r-niet{background:var(--warn-bg);color:var(--warn-line);border-color:var(--warn-line)}
+  .reachline{margin-top:6px}
+  .ahead{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+  .ahead h4{font-size:18px;margin:4px 0 2px}
+  .mapbox{background:var(--sea);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .mapbox svg{display:block;width:100%;height:auto}
+  .mapbox .ctry{fill:var(--land);stroke:var(--land-line);stroke-width:1.2}
+  .mapbox .za{fill:var(--land-za);stroke:var(--land-line);stroke-width:1.6}
+  .mapbox .drive{fill:none;stroke:var(--fg);stroke-width:3.5;stroke-linejoin:round;stroke-linecap:round;opacity:.75}
+  .mapbox .flight{fill:none;stroke:var(--sand-ink);stroke-width:3;stroke-dasharray:10 9}
+  .mapbox .klm{fill:none;stroke:var(--muted);stroke-width:2;stroke-dasharray:3 7;opacity:.8}
+  .mapbox .stop{stroke:var(--surface);stroke-width:3;cursor:pointer}
+  .mapbox .lbl{font:600 25px var(--font-body);fill:var(--fg);paint-order:stroke;stroke:var(--land-za);stroke-width:6px;stroke-linejoin:round;cursor:pointer}
+  .mapbox .lbl.sea{font:italic 400 24px var(--font-display);fill:var(--muted);stroke:none;cursor:default}
+  .mapbox .lbl.sub{font-weight:400;font-size:20px;fill:var(--muted)}
+  .mapbox a:hover .lbl, .mapbox a:focus .lbl{fill:var(--accent)}
+  .legend{display:flex;gap:16px;font-size:13px;color:var(--muted);padding:10px 14px;border-top:1px solid var(--line);background:var(--surface);flex-wrap:wrap}
+  .legend i{display:inline-block;width:22px;border-top:3px solid var(--fg);vertical-align:middle;margin-right:6px;opacity:.75}
+  .legend i.fl{border-top:3px dashed var(--sand-ink);opacity:1}
+  .legs{display:flex;flex-direction:column;gap:8px}
+  .leg{display:grid;grid-template-columns:12px minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;text-decoration:none;color:inherit}
+  .leg:hover{border-color:var(--sand)}
+  .leg .dot{width:12px;height:12px;border-radius:50%}
+  .leg .t{font-weight:600;line-height:1.3;display:block}
+  .leg .s{font-size:13px;color:var(--muted);display:block;line-height:1.35}
+  .leg .n{font-size:13px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .lead-sum{font-size:17px;color:var(--muted);max-width:62ch;margin:0 0 14px}
+  .maptip{font-size:13.5px;color:var(--muted);margin:10px 2px 0}
+
+  /* Dagen */
+  .filters{display:flex;gap:6px;flex-wrap:wrap}
+  .filters button{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:6px 12px;border-radius:999px;cursor:pointer}
+  .filters button.on{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+  .phase{margin:30px 0 12px;display:flex;align-items:center;gap:12px}
+  .phase .chip{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+  .phase .bar{flex:1;height:1px;background:var(--line)}
+  .day{display:grid;grid-template-columns:84px minmax(0,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+  .day.today{outline:3px solid var(--sand);outline-offset:-1px}
+  .day.past{opacity:.75}
+  .day.past .body{padding-bottom:12px}
+  .toggle{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--surface-2);color:var(--fg);border-radius:999px;padding:5px 12px;cursor:pointer}
+  .day .date{background:var(--surface-2);border-right:1px solid var(--line);padding:16px 6px;text-align:center;font-variant-numeric:tabular-nums}
+  .day .dow{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:600}
+  .day .dn{font-family:var(--font-display);font-size:32px;font-weight:600;line-height:1;margin:4px 0}
+  .day .mo{font-size:13px;color:var(--muted)}
+  .day .nr{margin-top:10px;font-size:11px;color:var(--muted)}
+  .day .stripe{height:4px}
+  .day .body{padding:15px 18px 14px;min-width:0}
+  .day h4{font-size:20px;margin-bottom:2px}
+  .day .where{color:var(--muted);font-size:14px;margin-bottom:10px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+  .tag{font-size:12.5px;font-weight:600;border-radius:7px;padding:3px 9px;background:var(--surface-2);color:var(--fg);border:1px solid var(--line);display:inline-flex;gap:6px;align-items:center}
+  .tag .k{font-weight:700;color:var(--muted);text-transform:uppercase;font-size:10.5px;letter-spacing:.08em}
+  .tag.fly{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+  .tag.fly .k{color:var(--bg);opacity:.7}
+  .tag.today{background:var(--sand);color:#0a1749;border-color:var(--sand)}
+  ul.items{list-style:none;margin:0;padding:0}
+  ul.items li{display:grid;grid-template-columns:58px minmax(0,1fr);gap:10px;padding:6px 0;border-top:1px dashed var(--line)}
+  ul.items li:first-child{border-top:0}
+  ul.items .tm{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;padding-top:1px}
+  ul.items .tx{font-size:15px}
+  .badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:5px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+  .b-ok{background:var(--ok-bg);color:var(--ok-fg)}
+  .b-res{background:var(--res-bg);color:var(--res-fg)}
+  .b-q{background:var(--q-bg);color:var(--q-fg)}
+  .note{margin-top:10px;font-size:14px;background:var(--note-bg);border-left:3px solid var(--sand);padding:8px 12px;border-radius:0 8px 8px 0}
+  .note.warn{background:var(--warn-bg);border-left-color:var(--warn-line)}
+  .dayfoot{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-top:10px}
+  .navlink{font-size:14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .navlink:hover{text-decoration:underline}
+  details.ideas{font-size:14px}
+  details.ideas summary{cursor:pointer;font-weight:600;color:var(--accent)}
+  details.ideas ul{margin:6px 0 0;padding-left:18px}
+  .dayfoot details{flex-basis:100%}
+  details.resto ul{list-style:none;padding-left:0}
+  details.resto li{padding:7px 0;border-top:1px dashed var(--line)}
+  details.resto li:first-child{border-top:0}
+  details.resto .rd{color:var(--muted);font-size:13.5px}
+  .rsrc{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+  #restoList details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:15px}
+  .tiplist{list-style:none;margin:0 0 10px;padding:0}
+  .tiplist li{padding:7px 0;border-top:1px dashed var(--line);font-size:15px}
+  .tiplist li:first-child{border-top:0}
+  .tiplist b{display:block}
+  .tiplist span{color:var(--muted);font-size:14px}
+
+  /* Tabellen en kaarten */
+  .tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+  .tbl{width:100%;border-collapse:collapse;font-size:14.5px}
+  .tbl th{background:var(--navy);color:var(--on-navy);text-align:left;font-weight:600;padding:10px 12px;font-size:13px}
+  .tbl td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+  .tbl .sub{color:var(--muted);font-size:13px}
+  .tbl .num{font-variant-numeric:tabular-nums;text-align:center}
+  .tbl tfoot td{font-weight:700;background:var(--surface-2)}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;min-width:0}
+  .card h3{font-size:19px;margin-bottom:8px}
+  .card ul{margin:6px 0;padding-left:18px}
+  .card li{margin:3px 0}
+  .card .cap{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .flight{display:flex;align-items:center;gap:12px;margin:8px 0 6px}
+  .flight .ap{font-family:var(--font-display);font-size:28px;font-weight:600;line-height:1}
+  .flight .ap small{display:block;font-family:var(--font-body);font-size:13px;color:var(--muted);font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums}
+  .flight .line{flex:1;border-top:2px dashed var(--sand)}
+  .kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;font-size:14.5px;margin:0}
+  .kv dt{color:var(--muted)}
+  .kv dd{margin:0}
+  .kv.ck{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:14px}
+
+  .check{display:flex;flex-direction:column;gap:6px}
+  .check label{display:flex;gap:10px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer}
+  .check input{margin-top:4px;accent-color:var(--sand-ink);width:17px;height:17px;flex:none}
+  .check label.done span{color:var(--muted);text-decoration:line-through}
+  .check small{display:block;color:var(--muted);font-size:13px}
+  .cgroup{font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:12px;margin:18px 2px 4px}
+  .cgroup:first-child{margin-top:0}
+  .cgroup span{letter-spacing:0;text-transform:none;font-weight:600;font-variant-numeric:tabular-nums}
+  .progress{height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden;margin:4px 0 12px}
+  .progress div{height:100%;background:var(--sand-ink);width:0;transition:width .3s}
+
+  .home{background:var(--surface);border:2px solid var(--sand);border-radius:var(--radius);padding:18px 20px;margin-bottom:6px}
+  .home h3{font-size:21px;margin:4px 0 6px}
+  .home p{margin:0 0 12px;max-width:68ch}
+  .home .cap{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sand-ink);font-weight:700}
+  .homegrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:12px}
+  .homegrid div{background:var(--surface-2);border-radius:10px;padding:10px 12px;min-width:0}
+  .homegrid span{display:block;font-size:12.5px;color:var(--muted)}
+  .homegrid b{display:block;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;user-select:all}
+  .home .small{font-size:13.5px;color:var(--muted);margin:0}
+  @media (max-width:820px){.homegrid{grid-template-columns:minmax(0,1fr)}}
+  .sos{background:var(--navy);color:var(--on-navy);border-radius:var(--radius);padding:18px 20px}
+  .sos h3{font-size:19px;margin-bottom:6px}
+  .sos .row{display:flex;justify-content:space-between;align-items:center;gap:6px 12px;padding:9px 0;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
+  .sos .row:first-of-type{border-top:0}
+  .sos .row span{color:var(--on-navy-muted);font-size:13.5px}
+  .sos .nr{display:flex;align-items:center;gap:8px}
+  .sos .nr a{color:var(--sand);font-weight:700;font-variant-numeric:tabular-nums;text-decoration:none;user-select:all;white-space:nowrap}
+  .copy{font:inherit;font-size:12px;font-weight:600;background:transparent;color:var(--on-navy-muted);border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:2px 8px;cursor:pointer}
+
+  footer{margin-top:44px;padding-block:26px 34px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
+
+  @media (max-width:820px){
+    .route-grid,.grid2,.grid3{grid-template-columns:minmax(0,1fr)}
+  }
+  @media (max-width:520px){
+    .day{grid-template-columns:62px minmax(0,1fr)}
+    .day .dn{font-size:25px}
+    .day .body{padding:13px 13px 12px}
+    ul.items li{grid-template-columns:46px minmax(0,1fr);gap:8px}
+    .tbl.resp thead{display:none}
+    .tbl.resp,.tbl.resp tbody,.tbl.resp tr,.tbl.resp td,.tbl.resp tfoot{display:block;width:100%}
+    .tbl.resp tr{border-top:1px solid var(--line);padding:8px 0}
+    .tbl.resp tbody tr:first-child{border-top:0}
+    .tbl.resp td{border:0;padding:3px 12px;text-align:left}
+    .tbl.resp td[data-l]::before{content:attr(data-l);display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  }
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Onze reis · najaar 2026</div>
+      <h1>Zuid Afrika</h1>
+    </div>
+    <a class="countdown" id="countdown" href="#dagen">Naar het reisschema</a>
+  </div>
+</header>
+
+<nav class="top" aria-label="Pagina's">
+  <div class="wrap">
+    <a href="#samenvatting">Samenvatting</a>
+    <a href="#dagen">Dagplanning</a>
+    <a href="#verblijf">Verblijven</a>
+    <a href="#vervoer">Vluchten en auto</a>
+    <a href="#praktisch">Praktisch</a>
+    <a href="#tips">Tips</a>
+    <a href="#paklijst">Paklijst</a>
+    <a href="#nood">Noodnummers</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="samenvatting" class="page">
+    <p class="lead-sum">Van de bush van Limpopo via de Tuinroute en de Winelands naar Kaapstad. Drie weken, negen verblijven en alles wat we onderweg willen zien.</p>
+    <div class="stats">
+      <div class="stat"><b>22 okt</b><span>tot 12 nov</span></div>
+      <div class="stat"><b>21</b><span>nachten</span></div>
+      <div class="stat"><b>9</b><span>verblijven</span></div>
+      <div class="stat"><b>±1.450</b><span>km zelf rijden</span></div>
+    </div>
+    <div class="sumgrid">
+      <div class="card next" id="nextCard"></div>
+      <div class="card">
+        <h3>Vluchten</h3>
+        <ul class="moments" id="moments"></ul>
+      </div>
+    </div>
+    <div class="sec-head">
+      <h2>De route</h2>
+      <p>Tik op een plaats of etappe om naar die dagen te gaan.</p>
+    </div>
+    <div class="route-grid">
+      <div>
+        <div class="mapbox">
+          <svg id="map" viewBox="100 125 840 790" role="img" aria-label="Kaart van onze route door Zuid Afrika"></svg>
+          <div class="legend"><span><i></i>met de auto</span><span><i class="fl"></i>binnenlandse vlucht</span></div>
+        </div>
+        <p class="maptip">Onderweg navigeren? Bij elke rijdag in de dagplanning staat een knop die de route direct in Google Maps opent.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <h3>Snel contact</h3>
+      <div class="quick">
+        <div><span>Thuisblijvers: Lisette van Leeuwen, The Travel District</span><b>+31 6 30 29 79 66</b></div>
+        <div><span>Onderweg: Highline Travel Services, 24/7</span><b>+27 82 467 3001</b></div>
+      </div>
+      <p style="margin:10px 0 0"><a href="#nood">Alle noodnummers</a></p>
+    </div>
+  </section>
+
+  <section id="dagen" class="page">
+    <div class="sec-head">
+      <h2>Dag voor dag</h2>
+    </div>
+    <div id="days"></div>
+    <a class="backbtn" href="#samenvatting">← Terug naar samenvatting</a>
+  </section>
+
+  <section id="verblijf" class="page">
+    <div class="sec-head">
+      <h2>Verblijven</h2>
+      <p>Hotels inclusief ontbijt, de safari lodges op volpension.</p>
+    </div>
+    <div class="tblwrap">
+      <table class="tbl resp" id="staysTable">
+        <thead><tr><th>Data</th><th>Nachten</th><th>Accommodatie</th><th>Kamer en basis</th><th>Adres, telefoon en website</th></tr></thead>
+        <tbody></tbody>
+        <tfoot><tr><td colspan="5">Totaal 21 nachten</td></tr></tfoot>
+      </table>
+    </div>
+    <a class="backbtn" href="#samenvatting">← Terug naar samenvatting</a>
+  </section>
+
+  <section id="vervoer" class="page">
+    <div class="sec-head">
+      <h2>Vluchten en auto</h2>
+      <p>Per vlucht staat wanneer en waar we inchecken.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="cap">Do 22 okt · KL 591</div>
+        <div class="flight"><div class="ap">AMS<small>10:35</small></div><div class="line"></div><div class="ap">JNB<small>21:20</small></div></div>
+        <p>KLM Premium Economy naar Johannesburg OR Tambo.</p>
+        <dl class="kv ck"><dt>Online</dt><dd>Inchecken vanaf wo 21 okt 04:35 (30 uur van tevoren)</dd><dt>Schiphol</dt><dd>Taxi om 07:40, om 08:30 op Schiphol</dd></dl>
+      </div>
+      <div class="card">
+        <div class="cap">Do 29 okt · 5Z 971</div>
+        <div class="flight"><div class="ap">HDS<small>10:55</small></div><div class="line"></div><div class="ap">GRJ<small>13:20</small></div></div>
+        <p>CemAir Economy van Hoedspruit naar George.</p>
+        <dl class="kv ck"><dt>Online</dt><dd>Inchecken vanaf wo 28 okt 10:55 (24 uur van tevoren)</dd><dt>Luchthaven</dt><dd>Om 09:30 aanwezig, balie sluit 10:10</dd></dl>
+      </div>
+      <div class="card">
+        <div class="cap">Do 12 nov · KL 598</div>
+        <div class="flight"><div class="ap">CPT<small>00:30</small></div><div class="line"></div><div class="ap">AMS<small>11:15</small></div></div>
+        <p>KLM Premium Economy. Vertrek in de nacht van woensdag 11 op donderdag 12 november.</p>
+        <dl class="kv ck"><dt>Online</dt><dd>Inchecken vanaf di 10 nov 18:30, tijd Kaapstad (30 uur van tevoren)</dd><dt>Transfer</dt><dd>Wo 11 nov om 21:00 vanaf het hotel</dd></dl>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h3>Bagage</h3>
+        <dl class="kv">
+          <dt>Per persoon</dt><dd><b>Voor de hele reis: 1 handbagage van max. 7 kg en 1 koffer van max. 21 kg.</b> Dat is de regel van CemAir; KLM staat meer toe, maar zo past alles ook op de binnenlandse vlucht.</dd>
+        </dl>
+        <div class="note warn">Thuis al inpakken op 21 kg per koffer en 7 kg handbagage. Dan hoeft er in Hoedspruit niets meer om.</div>
+      </div>
+      <div class="card">
+        <h3>Huurauto's</h3>
+        <dl class="kv">
+          <dt>Auto 1</dt><dd>23 okt 09:00 ophalen bij Tempest Car Hire, luchthaven Johannesburg. 29 okt inleveren op luchthaven Hoedspruit.</dd>
+          <dt>Auto 2</dt><dd>29 okt ophalen op luchthaven George. 11 nov om 14:00 opgehaald bij Ocean View House, sleutels bij de receptie.</dd>
+          <dt>Type</dt><dd>Toyota Urban Cruiser SUV, automaat, of gelijkwaardig.</dd>
+          <dt>Inbegrepen</dt><dd>Alle verzekeringen, onbeperkt kilometers, luchthavenbelasting en extra bestuurder (laten aantekenen bij ophalen).</dd>
+          <dt>Ter plaatse</dt><dd>One way fee R 1.217 per auto. Bij auto 2 ook R 807,30 ophaalkosten hotel.</dd>
+          <dt>Nodig</dt><dd>Creditcard met pincode op naam van de hoofdbestuurder, plus van beiden het Nederlandse en internationale rijbewijs.</dd>
+          <dt>Tol</dt><dd>Via een tag in de auto, wordt achteraf doorbelast.</dd>
+        </dl>
+      </div>
+    </div>
+    <a class="backbtn" href="#samenvatting">← Terug naar samenvatting</a>
+  </section>
+
+  <section id="praktisch" class="page">
+    <div class="sec-head">
+      <h2>Praktisch</h2>
+      <p>Goed om te weten voor en tijdens de reis.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <h3>Contact voor thuisblijvers</h3>
+        <p><b>Lisette van Leeuwen</b>, The Travel District. Zij heeft de hele reis geregeld en is het aanspreekpunt voor familie en vrienden in Nederland.</p>
+        <dl class="kv">
+          <dt>Mobiel</dt><dd>+31 6 30 29 79 66</dd>
+          <dt>Mail</dt><dd>lisette@thetraveldistrict.nl</dd>
+          <dt>Noodnummer</dt><dd>06 13 06 01 32 (thuisblijversnummer reisbureau)</dd>
+        </dl>
+        <p><a href="#nood">Alle noodnummers</a></p>
+      </div>
+      <div class="card">
+        <h3>Geld en fooien</h3>
+        <ul>
+          <li>Rekenkoers ongeveer €1 = R 20.</li>
+          <li>Game drives: ongeveer R 300 per auto voor ranger en tracker.</li>
+          <li>Restaurants: ongeveer 10%.</li>
+          <li>Hoedspruit is goedkoop, Franschhoek en Kaapstad zitten op Nederlands niveau.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Onderweg</h3>
+        <ul>
+          <li>Mobiel internet via een eSIM van Airalo (geregeld).</li>
+          <li>Reizigersverklaring invullen binnen 24 uur voor vertrek via <a href="https://www.sars.gov.za/travellerdeclaration/" target="_blank" rel="noopener">sars.gov.za</a>.</li>
+          <li>SATIB Guardian app na aankomst installeren: noodknop met hulpdienst. De activeringscode staat op de voucher.</li>
+          <li>Franschhoek: Uber is daar minder betrouwbaar. Chambray Estate regelt taxi's voor ons.</li>
+          <li>Kaapstad: Ocean View House regelt taxi's en Ubers.</li>
+          <li>Bij het inchecken in beide hotels meteen doorgeven welk vervoer we nodig hebben, zodat ze het op tijd kunnen regelen.</li>
+          <li>Trails Camp: geen wifi en geen stroom. Handdoeken zijn aanwezig.</li>
+          <li>Niet zwemmen met zeehonden in verband met een rabiësuitbraak.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h3>Bereikbaarheid</h3>
+        <p style="margin:0 0 10px">Bij elke dag in de dagplanning staat hoe goed we bereikbaar zijn. Horen jullie een dag niets, dan is dat meestal de reden.</p>
+        <dl class="kv">
+          <dt><span class="tag reach r-goed">Goed</span></dt><dd>Wifi in het hotel en mobiel internet via de eSIM.</dd>
+          <dt><span class="tag reach r-beperkt">Beperkt</span></dt><dd>Vliegdag, lange rijdag of vroeg en laat op safari. Berichten komen later aan.</dd>
+          <dt><span class="tag reach r-niet">Niet</span></dt><dd>25 tot 27 oktober in het Trails Camp: geen wifi en geen stroom.</dd>
+        </dl>
+        <div class="note">Op safaridagen is rond het middaguur het beste moment om te appen. Bij spoed als wij niet bereikbaar zijn: bel Lisette, zij kan ons via de lokale agent bereiken.</div>
+      </div>
+      <div class="card">
+        <h3>Reisverzekering</h3>
+        <dl class="kv">
+          <dt>Verzekeraar</dt><dd>Nationale Nederlanden (NN), doorlopende reis en annuleringsverzekering</dd>
+          <dt>Verzekerd</dt><dd>Gezinspolis zonder kinderen, voor ons beiden</dd>
+          <dt>Polisnummer</dt><dd><b style="user-select:all">159398398025</b></dd>
+          <dt>Dekking</dt><dd>Hele wereld, maximaal 90 dagen per reis. Hulpverlening, repatriëring, medische kosten, ongevallen, bagage en geld.</dd>
+          <dt>Annulering</dt><dd>Tot € 10.000 per persoon per reis</dd>
+          <dt>Eigen risico</dt><dd>€ 50 per persoon per reis, alleen bij bagage en schade aan het verblijf</dd>
+        </dl>
+        <div class="note warn"><b>Hulp nodig op reis?</b> Bel de NN Alarmcentrale, dag en nacht: <b style="user-select:all">+31 26 400 2390</b>. Houd het polisnummer bij de hand.<br>Vragen of schade melden na de reis: adviseur Veldsink Van Peufflik, <b style="user-select:all">+31 412 623 671</b>.</div>
+      </div>
+    </div>
+    <a class="backbtn" href="#samenvatting">← Terug naar samenvatting</a>
+  </section>
+
+  <section id="tips" class="page">
+    <div class="sec-head">
+      <h2>Tips</h2>
+      <p>Tips van vrienden en de restaurants die The Travel District aanraadt.</p>
+    </div>
+    <div class="grid2" id="tipsList"></div>
+    <div class="sec-head" style="margin-top:26px"><h2>Restaurants per plek</h2><p>Tik op een plek om de lijst te openen.</p></div>
+    <div id="restoList"></div>
+    <a class="backbtn" href="#samenvatting">← Terug naar samenvatting</a>
+  </section>
+
+  <section id="paklijst" class="page">
+    <div class="sec-head">
+      <h2>Paklijst en nog regelen</h2>
+      <p id="checkCount">Afvinken wat klaar is.</p>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="check" id="checks"></div>
+    <a class="backbtn" href="#samenvatting">← Terug naar samenvatting</a>
+  </section>
+
+  <section id="nood" class="page">
+    <div class="sec-head"><h2>Noodnummers</h2><p>Nummer kopiëren of aantikken om te bellen.</p></div>
+    <div class="home">
+      <div class="cap">Voor thuisblijvers</div>
+      <h3>Lisette van Leeuwen is jullie aanspreekpunt</h3>
+      <p>Is er iets thuis, of kunnen jullie ons niet bereiken? Neem contact op met Lisette van The Travel District. Zij heeft de reis geregeld en kan ons en de lokale agent in Zuid Afrika bereiken.</p>
+      <div class="homegrid">
+        <div><span>Lisette, mobiel en WhatsApp</span><b>+31 6 30 29 79 66</b></div>
+        <div><span>Mail</span><b>lisette@thetraveldistrict.nl</b></div>
+        <div><span>Noodnummer reisbureau voor thuisblijvers</span><b>06 13 06 01 32</b></div>
+      </div>
+      <p class="small">Lisette is tot de ochtend van 25 oktober zelf op reis en dan minder snel bereikbaar. Bij spoed in die dagen: het noodnummer van het reisbureau.</p>
+    </div>
+    <h3 class="cgroup" style="margin-top:22px">Voor onderweg</h3>
+    <div class="grid2" id="sos"></div>
+    <a class="backbtn" href="#samenvatting">← Terug naar samenvatting</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Zuid Afrika · 22 oktober tot 12 november 2026<br>Geregeld via The Travel District en Highline Travel Services. Tijden van excursies worden telkens de dag ervoor bevestigd.</div>
+</footer>
+
+<script>
+const PHASES = {
+  joburg: { name: "Johannesburg",          color: "#0a1749" },
+  safari: { name: "Safari in Limpopo",      color: "#9a6b2f" },
+  tuin:   { name: "Tuinroute",              color: "#2f7a5a" },
+  karoo:  { name: "Klein Karoo",            color: "#b4632d" },
+  walvis: { name: "Walviskust Hermanus",    color: "#2b6c9e" },
+  wijn:   { name: "Winelands",              color: "#7a2e4a" },
+  kaap:   { name: "Kaapstad",               color: "#0a1749" }
+};
+
+const RESTO = {
+  hoed:{ title:"Restaurants in Hoedspruit", src:"Selectie van The Travel District", items:[
+    ["The Hat & Creek","Stijlvol, grill en zeevruchten met lokale ingrediënten, uitgebreide wijnkaart en een boma met open haard. Tegenover het Kamogelo Centre.","+27 15 793 1135"],
+    ["Sleepers","In het oude stationsgebouw. Zuid Afrikaanse gerechten, pizza's en steaks, ontspannen sfeer. Een favoriet in Hoedspruit.","+27 73 527 9271"],
+    ["Hoedspruit Café","Gezellig voor ontbijt, lunch of diner, goede koffie. Niet elke avond open. Kamogelo Centre.","+27 15 110 0558"],
+    ["Blue Mountain","Restaurant en bar met uitzicht op de Drakensbergen. Zelfde eigenaren als Hat & Creek, ook vegetarisch.","+27 15 003 0663"],
+    ["The Harvest House","Klein en industrieel, ontbijt tot diner met verse lokale ingrediënten. Zandspruit Boulevard.","+27 65 574 8374"],
+    ["Arugula","In het oude Zandspruit Farmhouse, gezonde lunch en diner in een rustige omgeving.","+27 78 434 9542"],
+    ["Anne's Cotton Club","Koffie, ontbijt, lunch en afternoon tea. Bosveld Centre aan de R40 richting Klaserie.","+27 79 286 5600"],
+    ["The Manor House @ Khaya Ndlovu","Exclusief, volgens The Travel District een van de beste van het dorp. Vooraf reserveren, eventueel via The Travel District.","+27 73 301 1913"],
+    ["Fig & Bean","Koffie en snelle lunch, sandwiches en smoothies. Rock Fig Centre.","+27 82 907 4295"],
+    ["Thirsty Giraffe","Bushpub met burgers, pizza's en espetada's, 5 km buiten het dorp aan de R40. Zaterdag het drukst.","+27 72 676 3374"],
+    ["Maroela Bar","Pub en bistro met craftbier, gin en pubfood. Rugby op groot scherm.","+27 71 040 4124"],
+    ["The Brewery","Tapbier, de beste pizza's van het dorp en een bierproeverij. Bosveld Centre.","+27 73 445 8785"],
+    ["Three Bridges","Aan de Olifants rivier met zicht op olifanten en nijlpaarden. Hier start het Trails Camp.","+27 79 912 9416"]
+  ]},
+  plet:{ title:"Restaurants in Plettenberg Bay", src:"Selectie van The Travel District", items:[
+    ["The Fat Fish","Hopwood Street, Central Beach","https://thefatfish.co.za/"],
+    ["Nguni","6 Crescent Street","https://nguni-restaurant.co.za/"],
+    ["Enrico Ristorante","296 Main Street, Keurboomstrand. Ontspannen lunchplek, niet formeel.",""],
+    ["Zinzi","Hunter's Estate aan de N2","https://zinzi.hunterhotels.com/"],
+    ["Amelia's at The Plettenberg","In ons eigen hotel, 40 Church Street","https://www.theplettenberghotel.com/restaurants-bars/amelias-at-the-plettenberg/"],
+    ["Emily Moon","1 Rietvlei Road","https://emilymoon.co.za/dining-at-emilys/"],
+    ["The Lookout","Hill Street, Lookout Beach","https://lookout.co.za/"]
+  ]},
+  fran:{ title:"Restaurants in Franschhoek en omgeving", src:"Selectie van The Travel District", items:[
+    ["La Petite Colombe","Leeu Estates, Dassenberg Road. Gereserveerd op 4 nov om 19:00.","https://leeucollection.com/SA/leeu-estates/la-petite-colombe"],
+    ["Jan Franschhoek","La Motte Wine Estate","https://www.dineplan.com/restaurants/jan-franschhoek"],
+    ["Epice","Le Quartier Français Hotel, Huguenot Street","https://www.lacolombe.restaurant/epice"],
+    ["Protégé","18 Huguenot Street","https://www.lacolombe.restaurant/protege"],
+    ["Babel at Babylonstoren","Simondium. Lunch gereserveerd op 6 nov om 12:30.","https://babylonstoren.com/babel"],
+    ["Maison, Chef's Warehouse","R45, Franschhoek","https://www.chefswarehouse.co.za/maison"]
+  ]},
+  kaap:{ title:"Restaurants in Kaapstad", src:"Selectie van The Travel District, aangevuld met tips", items:[
+    ["Haiku","Aziatisch. Tip: echt heel goed.",""],
+    ["Salsify at the Roundhouse","Roundhouse Road, Camps Bay. Dichtbij ons hotel.","https://salsify.co.za/"],
+    ["Fyn","Church Square, 37 Parliament Street, centrum","https://www.fynrestaurant.com/"],
+    ["The Pot Luck Club","The Old Biscuit Mill, Woodstock. Gereserveerd op 7 nov om 18:00.","https://thepotluckclub.co.za/"],
+    ["La Colombe","Silvermist Wine Estate, Constantia","https://www.lacolombe.restaurant/la-colombe"],
+    ["Chefs Warehouse Beau Constantia","Constantia Nek","https://www.chefswarehouse.co.za/beauconstantia"],
+    ["The Bistro @ Klein Constantia","Constantia","https://www.kleinconstantia.com/the-bistro/"],
+    ["Foodbarn","Noordhoek Farm Village. Handig op de dag van Chapman's Peak.","https://www.thefoodbarn.co.za/"],
+    ["Bus Cuisine","Kaapstad","https://www.buscuisine.co.za/"]
+  ]}
+};
+
+const TIPS = [
+  { group:"Winelands", day:"2026-11-05", items:[
+    ["Spier overslaan","https://www.spier.co.za/","Erg toeristisch en druk."],
+    ["Delaire Graff","https://www.delaire.co.za/","Een vrij stijve, formele bedoeling. Moet je van houden."],
+    ["Thelema","https://www.thelema.co.za/","Wijnhuis in Stellenbosch, bekend bij de Britse koninklijke familie."],
+    ["Jordan","https://www.jordanwines.com/","Wijnhuis in Stellenbosch, de favoriet van een collega."],
+    ["Chamonix","https://chamonixestate.co.za/","Wijnhuis in Franschhoek."],
+    ["Waterford","https://www.waterfordestate.co.za/","Proeverij met chocolade erbij. The Jem is de beste wijn van het huis."],
+    ["Dusk, Stellenbosch","https://dineplan.com/restaurants/dusk","Restaurant dat waanzinnig zou moeten zijn. Gereserveerd op 5 nov om 19:00."]
+  ]},
+  { group:"Tuinroute", day:"2026-10-30", items:[
+    ["Knysna","Leuke stad, dichtbij Plettenberg Bay. In de binnenhaven eet je heel verse vis."]
+  ]},
+  { group:"Kaapse schiereiland", day:"2026-11-10", items:[
+    ["Chapman's Peak Drive","https://www.chapmanspeakdrive.co.za/","Tolweg met een geweldig uitzicht."],
+    ["Simon's Town, Boulders Beach","https://www.sanparks.org/parks/table-mountain/what-to-do/attractions/boulders-penguin-colony","Hier zit de pinguïnkolonie."],
+    ["Cape Point, Kaap de Goede Hoop","https://www.capepoint.co.za/","Waar de Atlantische en de Indische Oceaan samenkomen. Let op: er zitten bavianen."]
+  ]},
+  { group:"Kaapstad", day:"2026-11-08", items:[
+    ["Sunset tour vanaf de Waterfront","https://www.waterfrontcharters.co.za/","Boottocht bij zonsondergang vanaf de V&A Waterfront."],
+    ["Haiku","Aziatisch restaurant, echt heel goed."]
+  ]}
+];
+
+const DAYS = [
+  { d:"2026-10-21", pre:true, phase:"joburg", title:"Dag voor vertrek", where:"Thuis",
+    items:[
+      ["04:35","Online inchecken KLM heenvlucht kan vanaf nu"],
+      ["10:35","SARS reizigersverklaring invullen kan vanaf nu"],
+      ["","Koffers inpakken: per persoon 21 kg koffer en 7 kg handbagage"]
+    ],
+    note:"Taxi staat morgen om 07:40 voor de deur."
+  },
+  { d:"2026-10-22", phase:"joburg", title:"Vertrek naar Johannesburg", where:"Amsterdam → Johannesburg",
+    sleep:"InterContinental OR Tambo", basis:"Logies en ontbijt", fly:"KL 591",
+    items:[
+      ["07:40","Taxi haalt ons thuis op"],
+      ["08:30","Aankomst Schiphol, bagage afgeven"],
+      ["10:35","Vlucht KL 591 naar Johannesburg, Premium Economy","ok"],
+      ["21:20","Landing OR Tambo, bagage ophalen"],
+      ["","Te voet naar het InterContinental, tegenover de terminals","ok"]
+    ],
+    note:"Online inchecken en de SARS reizigersverklaring zijn gisteren al geopend. Nog niet gedaan? Dan nu."
+  },
+  { d:"2026-10-23", phase:"safari", title:"Naar Karongwe Game Reserve", where:"Johannesburg → Dullstroom → Karongwe",
+    sleep:"River Safari Lodge, Presidential Suite", basis:"Volpension met 2 game drives per dag", drive:"429 km · ±5 uur",
+    items:[
+      ["","Ontbijt in het hotel"],
+      ["09:00","Huurauto ophalen bij Tempest Car Hire (binnendoor lopen)","ok"],
+      ["","Rijden richting het noordoosten"],
+      ["","Lunch in Dullstroom, halverwege"],
+      ["","Aankomst River Safari Lodge aan de Makhutswi rivier","ok"],
+      ["","Middag game drive"],
+      ["","Diner, vaak in de boma rond het kampvuur"]
+    ],
+    note:"Extra bestuurder laten aantekenen op het contract. One way fee R 1.217 ter plaatse betalen."
+  },
+  { d:"2026-10-24", phase:"safari", title:"Safaridag Karongwe", where:"Karongwe Game Reserve",
+    sleep:"River Safari Lodge", basis:"Volpension",
+    items:[
+      ["","Wekken rond zonsopgang met koffie, eerste game drive"],
+      ["","Uitgebreid ontbijt in de lodge"],
+      ["","Zwembad, lunch en uitrusten tijdens de warmste uren"],
+      ["","Namiddag game drive met sundowner"],
+      ["","Diner"]
+    ]
+  },
+  { d:"2026-10-25", phase:"safari", title:"Naar het Trails Camp", where:"Karongwe → Three Bridges → Olifants Private Game Reserve",
+    sleep:"Trails Camp, tent aan de Olifants rivier", basis:"Volpension, privégids en kok", drive:"81 km · ±1 uur",
+    items:[
+      ["","Laatste ochtend game drive en ontbijt"],
+      ["13:30","Rijden naar Restaurant Three Bridges (±22 km ten noorden van Hoedspruit)"],
+      ["","Lunch bij Three Bridges"],
+      ["15:00","Ontmoeten privégids bij Three Bridges, auto blijft daar staan","ok"],
+      ["","Privé game drive door het Olifants reservaat"],
+      ["","Aankomst in het kamp, diner van de privékok rond het kampvuur"]
+    ],
+    note:"Ongeveer een dag van tevoren stuurt My Africa Adventures een app met de exacte locatie en tijd. In het kamp is geen wifi en geen stroom."
+  },
+  { d:"2026-10-26", phase:"safari", title:"Bushwalk en wildernis", where:"Olifants Private Game Reserve",
+    sleep:"Trails Camp", basis:"Volpension",
+    items:[
+      ["","Vroeg op voor een bushwalk met de gids, zwaar of rustig naar keuze"],
+      ["","Ontbijt in het kamp"],
+      ["","Vrije invulling, af te stemmen met de gids"],
+      ["","Middag game drive"],
+      ["","Diner rond het kampvuur"]
+    ]
+  },
+  { d:"2026-10-27", resto:"hoed", phase:"safari", title:"Terug naar de bewoonde wereld", where:"Olifants → Hoedspruit",
+    sleep:"Unembeza Boutique Lodge, Main Lodge Deluxe Room", basis:"Logies en ontbijt", drive:"28 km · ±40 min",
+    items:[
+      ["","Ochtendactiviteit en ontbijt aan de rivier"],
+      ["","Gids brengt ons terug naar Three Bridges"],
+      ["","Rijden naar Unembeza op Hoedspruit Wildlife Estate","ok"],
+      ["","Lunch en zwembad"],
+      ["","Diner"]
+    ]
+  },
+  { d:"2026-10-28", resto:"hoed", phase:"safari", title:"Vrije dag in Hoedspruit", where:"Hoedspruit",
+    sleep:"Unembeza Boutique Lodge", basis:"Logies en ontbijt", todo:true,
+    items:[
+      ["","Ontbijt"],
+      ["10:55","Online inchecken CemAir voor morgen kan vanaf nu"],
+      ["","Activiteit nog kiezen","q"],
+      ["","Lunch"],
+      ["","Diner bij Caya Njovo?","q"]
+    ],
+    ideas:["Boottocht in de ochtend","Helikoptervlucht","Mountainbiken langs giraffen en zebra's op het Wildlife Estate","Kruger Park via Orpen Gate (±45 min rijden)","Panoramaroute: afgevallen, te lang"],
+    note:"Morgen om 09:00 vertrekken naar de luchthaven, auto inleveren."
+  },
+  { d:"2026-10-29", resto:"plet", phase:"tuin", title:"Vliegen naar de Tuinroute", where:"Hoedspruit → George → Plettenberg Bay",
+    sleep:"The Plettenberg, Luxury Double met zeezicht", basis:"Logies en ontbijt", fly:"5Z 971", drive:"17 km + 103 km",
+    items:[
+      ["","Ontbijt en uitchecken"],
+      ["09:00","Vertrek naar Hoedspruit Airport (±30 min)"],
+      ["09:30","Auto inleveren en inchecken bij CemAir, balie sluit om 10:10"],
+      ["10:55","Vlucht 5Z 971 naar George","ok"],
+      ["13:20","Landing George, tweede huurauto ophalen","ok"],
+      ["","Ergens lunchen"],
+      ["","Rijden naar Plettenberg Bay (±1 uur 40)"],
+      ["","Inchecken The Plettenberg, 4 nachten","ok"],
+      ["","Diner"]
+    ],
+    note:"Bagage CemAir: 1 koffer van max. 21 kg en 1 handbagage van max. 7 kg per persoon."
+  },
+  { d:"2026-10-30", resto:"plet", phase:"tuin", title:"Robberg Nature Reserve", where:"Plettenberg Bay",
+    sleep:"The Plettenberg", basis:"Logies en ontbijt",
+    items:[
+      ["","Ontbijt"],
+      ["","Wandeling Robberg Nature Reserve, rondje van ±4 uur langs de kliffen"],
+      ["","Lunch"],
+      ["","Middag vrij"],
+      ["","Diner"]
+    ],
+    ideas:["Monkeyland","Canyoning (zonder springen)","Zipline Mossel Bay (staat op de lijst)","Dagtrip Knysna: lagune, Knysna Heads en oesters"],
+    note:"Niet zwemmen met zeehonden in verband met de rabiësuitbraak."
+  },
+  { d:"2026-10-31", resto:"plet", phase:"tuin", title:"Markten op zaterdag", where:"Plettenberg Bay en omgeving",
+    sleep:"The Plettenberg", basis:"Logies en ontbijt",
+    items:[
+      ["","Ontbijt"],
+      ["","Harkerville Saturday Market"],
+      ["","Wild Oats Community Farmers Market"],
+      ["","Lunch op de markt"],
+      ["","Diner"]
+    ]
+  },
+  { d:"2026-11-01", resto:"plet", phase:"tuin", title:"Tsitsikamma", where:"Tsitsikamma National Park",
+    sleep:"The Plettenberg", basis:"Logies en ontbijt",
+    items:[
+      ["","Ontbijt"],
+      ["","Tsitsikamma National Park: wandelen of kajakken"],
+      ["","Lunch"],
+      ["","Middag vrij"],
+      ["","Diner"]
+    ]
+  },
+  { d:"2026-11-02", phase:"karoo", title:"Over de bergen naar Oudtshoorn", where:"Plettenberg Bay → Oudtshoorn",
+    sleep:"Surval Boutique Olive Estate, Luxury Room", basis:"Logies en ontbijt", drive:"162 km · ±2 uur 40",
+    items:[
+      ["","Ontbijt en uitchecken"],
+      ["","Rijden via de bergpassen naar de Klein Karoo"],
+      ["","Eventueel Cango Caves (ligt aan dezelfde weg als het hotel)","q"],
+      ["","Lunch"],
+      ["","Zwembad en uitrusten"],
+      ["","Diner"]
+    ]
+  },
+  { d:"2026-11-03", phase:"walvis", title:"Stokstaartjes en de kust", where:"Oudtshoorn → Hermanus",
+    sleep:"La Fontaine Guest House, Deluxe Sea Facing", basis:"Logies en ontbijt", drive:"446 km · ±5 uur 15",
+    items:[
+      ["vroeg","Five Shy Meerkats tour bij zonsopgang (±2 tot 3 uur)","ok"],
+      ["","Terug naar het hotel, ontbijt en uitchecken"],
+      ["","Rijden naar Hermanus"],
+      ["","Onderweg eventueel Creation Wines (Hemel en Aarde vallei)","q"],
+      ["","Inchecken La Fontaine aan Marine Drive","ok"]
+    ],
+    warn:"Vandaag belt Marine Dynamics met de definitieve tijd van de walvistour van morgen (geboekt 09:00). Niets gehoord om 16:00? Bel +27 82 801 8014.",
+    note:"Starttijd van de stokstaartjes wordt de dag ervoor bevestigd. Ophalen bij de lodge of zelf naar een verzamelpunt rijden. Lange rijdag, dus op tijd vertrekken."
+  },
+  { d:"2026-11-04", resto:"fran", phase:"wijn", title:"Walvissen en door naar Franschhoek", where:"Hermanus → Kleinbaai → Franschhoek",
+    sleep:"Chambray Estate, Luxury Room 1", basis:"Logies en ontbijt", drive:"±45 min + 97 km", res:true,
+    items:[
+      ["07:00","Vroeg ontbijt en uitchecken"],
+      ["07:30","Rijden naar Kleinbaai (±45 min)"],
+      ["08:15","Melden bij The Great White House voor registratie en briefing"],
+      ["09:00","Whale & Marine Big 5 trip met Marine Dynamics, tijd onder voorbehoud","ok"],
+      ["","Lunch in Hermanus"],
+      ["","Rijden naar Franschhoek, onderweg een wijnhuis: Creation, Waterkloof of Morgenster","q"],
+      ["","Inchecken Chambray Estate, 3 nachten. Meteen doorgeven welke taxi's we nodig hebben","ok"],
+      ["19:00","Diner La Petite Colombe, aanbetaald (tijd verzet van 18:30)","res"]
+    ],
+    warn:"De tour is geboekt om 09:00, maar die tijd is nooit gegarandeerd. Marine Dynamics belt of appt ons de dag ervoor (3 nov) met de definitieve tijd. Ook als het weer op het land goed lijkt, kan het op zee tegenvallen en schuift de tijd. Niets gehoord om 16:00? Bel +27 82 801 8014. De boot vertrekt uit Kleinbaai bij Gansbaai, niet uit Hermanus: The Great White House, 5 Geelbek Street.",
+    ideas:["Waterford: proeverij met chocolade, The Jem is hun beste wijn"]
+  },
+  { d:"2026-11-05", resto:"fran", phase:"wijn", title:"Wijndag met chauffeur", where:"Franschhoek en Stellenbosch",
+    sleep:"Chambray Estate", basis:"Logies en ontbijt", res:true,
+    items:[
+      ["","Ontbijt"],
+      ["08:30","Chauffeur haalt ons op bij Chambray, hele dag (BaileyZA)","ok"],
+      ["","Proeverij Delaire Graff, niet te reserveren dus op tijd zijn"],
+      ["","Lunch bij Delaire Graff"],
+      ["","Proeverij Leeu Passant"],
+      ["19:00","Diner Dusk, aanbetaald","res"]
+    ],
+    note:"De chauffeur staat op de voucher en in het reisschema voor vandaag, 5 november. Tip: Delaire Graff is vrij formeel, moet je van houden. Alternatieven in de buurt: Thelema en Jordan.",
+    tipsLink:true
+  },
+  { d:"2026-11-06", resto:"fran", phase:"wijn", title:"Babylonstoren en meer wijn", where:"Franschhoek en Stellenbosch",
+    sleep:"Chambray Estate", basis:"Logies en ontbijt", res:true,
+    items:[
+      ["","Ontbijt"],
+      ["","Spier wine farm (tip: overslaan, erg toeristisch)","q"],
+      ["12:30","Lunch Babylonstoren, aanbetaald","res"],
+      ["","Vrede en Lust"],
+      ["","Diner Tokara"]
+    ],
+    note:"Vandaag geen chauffeur. Voor de wijnhuizen en het diner een taxi laten regelen via Chambray Estate; Uber is hier minder betrouwbaar."
+  },
+  { d:"2026-11-07", resto:"kaap", phase:"kaap", title:"Naar Kaapstad", where:"Franschhoek → Camps Bay",
+    sleep:"Ocean View House, Classic Room", basis:"Logies en ontbijt", drive:"86 km · ±1 uur 40", res:true,
+    items:[
+      ["","Ontbijt en uitchecken"],
+      ["","Rijden naar Kaapstad"],
+      ["","Inchecken Ocean View House in Camps Bay, 5 nachten. Meteen doorgeven welk vervoer we nodig hebben (taxi of Uber)","ok"],
+      ["","Zwembad en bijkomen"],
+      ["18:00","Diner The Pot Luck Club","res"]
+    ],
+    ideas:["Surfles in Muizenberg","Maiden's Cove tidal pool"]
+  },
+  { d:"2026-11-08", resto:"kaap", phase:"kaap", title:"Kaapstad", where:"Kaapstad", todo:true,
+    sleep:"Ocean View House", basis:"Logies en ontbijt",
+    items:[
+      ["","Ontbijt"],
+      ["","Tafelberg met de kabelbaan (tickets van vandaag, geldig tot en met 14 nov)","ok"],
+      ["","Activiteiten nog invullen","q"],
+      ["","Diner"]
+    ],
+    ideas:["Fietstour door Kaapstad","Kirstenbosch Botanical Gardens","V&A Waterfront","District Six Museum","Bo Kaap"]
+  },
+  { d:"2026-11-09", resto:"kaap", phase:"kaap", title:"Kaapstad", where:"Kaapstad", todo:true,
+    sleep:"Ocean View House", basis:"Logies en ontbijt",
+    items:[
+      ["","Ontbijt"],
+      ["","Activiteiten nog invullen","q"],
+      ["","Lunch"],
+      ["","Diner"]
+    ],
+    ideas:["Slave Lodge","Watertunnels onder de stad","Robbeneiland (vanaf de Waterfront)","Street art in Woodstock"]
+  },
+  { d:"2026-11-10", resto:"kaap", phase:"kaap", title:"Rondje Kaapse schiereiland", where:"Kaap de Goede Hoop",
+    sleep:"Ocean View House", basis:"Logies en ontbijt",
+    items:[
+      ["","Ontbijt"],
+      ["","Chapman's Peak Drive (tolweg)"],
+      ["","Kaap de Goede Hoop, eventueel hiken in het park"],
+      ["","Simon's Town en de pinguïns van Boulders Beach"],
+      ["18:30","Online inchecken KLM terugvlucht kan vanaf nu"],
+      ["","Diner"]
+    ],
+    note:"Tafelberg nog niet gedaan? De tickets zijn geldig tot en met 14 november."
+  },
+  { d:"2026-11-11", resto:"kaap", phase:"kaap", title:"Laatste dag", where:"Camps Bay → luchthaven Kaapstad",
+    sleep:"Nachtvlucht", basis:"Kamer de hele dag beschikbaar",
+    items:[
+      ["","Ontbijt en ochtend vrij"],
+      ["","Lunch"],
+      ["14:00","Huurauto wordt opgehaald bij het hotel, sleutels bij de receptie","ok"],
+      ["","Diner in het hotel"],
+      ["21:00","Transfer naar Cape Town International","ok"]
+    ],
+    note:"Ter plaatse te betalen: one way fee R 1.217 en ophaalkosten R 807,30."
+  },
+  { d:"2026-11-12", phase:"kaap", title:"Terug naar huis", where:"Kaapstad → Amsterdam", fly:"KL 598",
+    items:[
+      ["00:30","Vlucht KL 598 naar Amsterdam, Premium Economy","ok"],
+      ["11:15","Landing Schiphol, de taxi haalt ons op"]
+    ]
+  }
+];
+
+const STAYS = [
+  { from:"22 okt", to:"23 okt", n:1, web:"https://www.ihg.com/intercontinental/hotels/us/en/johannesburg/jnbhc/hoteldetail", name:"InterContinental OR Tambo", place:"Johannesburg", room:"Classic Room", basis:"Logies en ontbijt", addr:"Tegenover de terminals van OR Tambo", tel:"+27 11 961 5400" },
+  { from:"23 okt", to:"25 okt", n:2, web:"https://riversafarilodge.com/", name:"River Safari Lodge", place:"Karongwe Game Reserve", room:"Presidential Suite", basis:"Volpension met activiteiten", addr:"R36 richting Tzaneen, Karongwe", tel:"+27 15 383 9909" },
+  { from:"25 okt", to:"27 okt", n:2, name:"Trails Camp", place:"Olifants Private Game Reserve", room:"Tent, gedeelde faciliteiten", basis:"Volpension, privégids en kok", addr:"Start bij Restaurant Three Bridges, 15:00", tel:"+27 71 030 7328" },
+  { from:"27 okt", to:"29 okt", n:2, web:"https://www.unembeza.com/", name:"Unembeza Boutique Lodge", place:"Hoedspruit", room:"Main Lodge Deluxe Room", basis:"Logies en ontbijt", addr:"Wag 'n Bietje, Hoedspruit Wildlife Estate", tel:"+27 63 742 8783" },
+  { from:"29 okt", to:"2 nov", n:4, web:"https://www.theplettenberghotel.com/", name:"The Plettenberg", place:"Plettenberg Bay", room:"Luxury Double met zeezicht", basis:"Logies en ontbijt", addr:"Lookout Rocks, 40 Church Street", tel:"+27 44 533 2030" },
+  { from:"2 nov", to:"3 nov", n:1, web:"https://www.surval.co.za/", name:"Surval Boutique Olive Estate", place:"Oudtshoorn", room:"Luxury Room", basis:"Logies en ontbijt", addr:"R328 Cango Caves Road", tel:"+27 87 350 1950" },
+  { from:"3 nov", to:"4 nov", n:1, web:"https://www.lafontainehermanus.co.za/", name:"La Fontaine Guest House", place:"Hermanus", room:"Deluxe Sea Facing", basis:"Logies en ontbijt", addr:"33 Marine Drive", tel:"+27 28 312 4595" },
+  { from:"4 nov", to:"7 nov", n:3, web:"https://www.chambrayestate.co.za/", name:"Chambray Estate", place:"Franschhoek", room:"Luxury Room 1", basis:"Logies en ontbijt", addr:"7 Green Valley Road", tel:"+27 82 606 2850" },
+  { from:"7 nov", to:"12 nov", n:5, web:"https://www.oceanview-house.com/", name:"Ocean View House", place:"Camps Bay, Kaapstad", room:"Classic Room", basis:"Logies en ontbijt", addr:"33 Victoria Road", tel:"+27 21 438 1982" }
+];
+
+const LEGS = [
+  { phase:"joburg", t:"Johannesburg", s:"Aankomst en eerste nacht", n:"1 nacht", day:"2026-10-22" },
+  { phase:"safari", t:"Safari in Limpopo", s:"Karongwe, Olifants Trails Camp, Hoedspruit", n:"6 nachten", day:"2026-10-23" },
+  { phase:"tuin",   t:"Tuinroute", s:"Plettenberg Bay, Robberg, Tsitsikamma", n:"4 nachten", day:"2026-10-29" },
+  { phase:"karoo",  t:"Klein Karoo", s:"Oudtshoorn en de stokstaartjes", n:"1 nacht", day:"2026-11-02" },
+  { phase:"walvis", t:"Walviskust", s:"Hermanus en de Marine Big 5", n:"1 nacht", day:"2026-11-03" },
+  { phase:"wijn",   t:"Winelands", s:"Franschhoek en Stellenbosch", n:"3 nachten", day:"2026-11-04" },
+  { phase:"kaap",   t:"Kaapstad", s:"Camps Bay, Tafelberg, het schiereiland", n:"5 nachten", day:"2026-11-07" }
+];
+
+const CHECKS = [
+  { group:"Nog regelen", items:[
+    ["rb-b","Internationaal rijbewijs hoofdbestuurder","ANWB, ook het Nederlandse rijbewijs mee"],
+    ["rb-e","Internationaal rijbewijs tweede bestuurder","ANWB, ook het Nederlandse rijbewijs mee"],
+    ["klm-h","Online inchecken KLM heenvlucht","Vanaf wo 21 okt 04:35"],
+    ["sars","Reizigersverklaring SARS invullen","Binnen 24 uur voor vertrek, vanaf wo 21 okt 10:35"],
+    ["satib","SATIB Guardian app installeren en activeren","Na aankomst, code staat op de voucher"],
+    ["cem","Online inchecken CemAir","Vanaf wo 28 okt 10:55"],
+    ["hds","Activiteit vrije dag Hoedspruit kiezen",""],
+    ["taxi-f","Vervoer doorgeven bij inchecken Chambray","4 nov: taxi's voor 6 nov en de diners"],
+    ["taxi-k","Vervoer doorgeven bij inchecken Ocean View House","7 nov: taxi of Uber voor Kaapstad"],
+    ["wijn","Wijnhuis onderweg naar Franschhoek kiezen","Creation, Waterkloof of Morgenster"],
+    ["cpt","Activiteiten Kaapstad invullen",""],
+    ["klm-t","Online inchecken KLM terugvlucht","Vanaf di 10 nov 18:30, tijd Kaapstad"]
+  ]},
+  { group:"Paklijst: documenten en geld", items:[
+    ["p-pas","Paspoorten",""],
+    ["p-rb","Rijbewijzen, Nederlands en internationaal",""],
+    ["p-cc","Creditcard met pincode op naam van de hoofdbestuurder","Borg voor beide huurauto's"],
+    ["p-pin","Tweede betaalkaart of creditcard","Als reserve"],
+    ["p-rand","Wat contant geld in rand","Voor fooien bij game drives en onderweg"],
+    ["p-docs","Reisbescheiden en vouchers op beide telefoons","Ook offline opgeslagen"],
+    ["p-verz","Pasje en nummer reisverzekering",""]
+  ]},
+  { group:"Paklijst: kleding", items:[
+    ["k-laag","Warme laag voor vroege game drives","Fleece of jas, de ochtenden zijn fris"],
+    ["k-safari","Kleding in neutrale kleuren voor de safari","Khaki, groen, beige"],
+    ["k-schoen","Stevige wandelschoenen","Bushwalk, Robberg en Tsitsikamma"],
+    ["k-sand","Sandalen of slippers",""],
+    ["k-zwem","Zwemkleding",""],
+    ["k-wind","Wind en regenjas","Walvisboot en Kaapstad"],
+    ["k-kilo","Inpakken op 21 kg koffer en 7 kg handbagage","Per persoon, voor de hele reis"],
+    ["k-pet","Pet of hoed en zonnebril",""],
+    ["k-net","Iets nettere kleding voor diners","La Petite Colombe, Dusk, Pot Luck Club"]
+  ]},
+  { group:"Paklijst: safari en onderweg", items:[
+    ["s-zon","Zonnebrand",""],
+    ["s-muggen","Muggenmiddel",""],
+    ["s-lamp","Hoofdlamp of zaklamp","Trails Camp heeft geen stroom"],
+    ["s-power","Powerbank","Trails Camp heeft geen stroom"],
+    ["s-fles","Herbruikbare waterfles",""]
+  ]},
+  { group:"Paklijst: elektronica en verzorging", items:[
+    ["e-lader","Telefoons en opladers",""],
+    ["e-stek","Reisstekker voor Zuid Afrika (type M)",""],
+    ["e-auto","Autolader en telefoonhouder","Voor navigatie in de huurauto"],
+    ["e-ozem","Ozempic","In de handbagage, niet in de koffer. Bewaren volgens de bijsluiter, recept of medicijnverklaring mee"],
+    ["e-med","Eigen medicijnen en klein EHBO setje",""],
+    ["e-toil","Toilettas",""]
+  ]}
+];
+
+
+
+/* Navigatie per rijdag: [van, naar] als zoekterm voor Google Maps */
+const NAV = {
+  "2026-10-23": [["OR Tambo International Airport","Dullstroom"],["Dullstroom","River Safari Lodge Karongwe Game Reserve"]],
+  "2026-10-25": [["River Safari Lodge Karongwe","Three Bridges Restaurant Hoedspruit"]],
+  "2026-10-27": [["Three Bridges Restaurant Hoedspruit","Unembeza Boutique Lodge Hoedspruit"]],
+  "2026-10-29": [["Unembeza Boutique Lodge Hoedspruit","Hoedspruit Eastgate Airport"],["George Airport","The Plettenberg Hotel Plettenberg Bay"]],
+  "2026-10-30": [["The Plettenberg Hotel","Robberg Nature Reserve"]],
+  "2026-11-01": [["The Plettenberg Hotel","Storms River Mouth Tsitsikamma"]],
+  "2026-11-02": [["The Plettenberg Hotel Plettenberg Bay","Surval Boutique Olive Estate Oudtshoorn"]],
+  "2026-11-03": [["Surval Boutique Olive Estate Oudtshoorn","La Fontaine Guest House Hermanus"]],
+  "2026-11-04": [["La Fontaine Guest House Hermanus","Great White House Kleinbaai"],["Great White House Kleinbaai","Chambray Estate Franschhoek"]],
+  "2026-11-07": [["Chambray Estate Franschhoek","Ocean View House Camps Bay"]],
+  "2026-11-08": [["Ocean View House Camps Bay","Table Mountain Lower Cable Station"]],
+  "2026-11-10": [["Ocean View House Camps Bay","Cape Point"],["Cape Point","Boulders Beach Simon's Town"]]
+};
+
+const SOS = [
+  { title:"Reisorganisatie", rows:[
+    ["Highline Travel Services","Lokale agent, 24/7, ook WhatsApp","+27 82 467 3001"],
+    ["Lisette van Leeuwen","Voor ons: overdag appen, 's nachts bellen","+31 6 30 29 79 66"],
+    ["My Africa Adventures","Trails Camp Olifants","+27 71 030 7328"],
+    ["SATIB Guardian","Noodhulp app en support","+27 87 095 2842"],
+    ["NN Alarmcentrale","Reisverzekering, 24/7, polis 159398398025","+31 26 400 2390"]
+  ]},
+  { title:"Hulpdiensten Zuid Afrika", rows:[
+    ["Alarmnummer","Vanaf een mobiele telefoon","112"],
+    ["Politie","","10111"],
+    ["Ambulance en brandweer","","10177"],
+    ["Highline kantoor","Tijdens werktijden","+27 12 667 3656"]
+  ]}
+];
+
+/* Bereikbaarheid per dag: goed, beperkt of niet */
+const REACH = {
+  "2026-10-21":["goed","Thuis"],
+  "2026-10-22":["beperkt","Vliegdag, 's avonds wifi in het hotel"],
+  "2026-10-23":["beperkt","Lange rijdag, 's avonds wifi in de lodge"],
+  "2026-10-24":["beperkt","Vroeg en laat op safari, rond de middag het beste"],
+  "2026-10-25":["niet","Vanaf de middag in het Trails Camp, geen wifi en geen stroom"],
+  "2026-10-26":["niet","Trails Camp, geen wifi en geen stroom"],
+  "2026-10-27":["beperkt","Vanaf de middag weer bereikbaar"],
+  "2026-10-28":["goed",""],
+  "2026-10-29":["beperkt","Vliegdag, vanaf de middag weer bereikbaar"],
+  "2026-10-30":["goed",""],"2026-10-31":["goed",""],"2026-11-01":["goed",""],"2026-11-02":["goed",""],
+  "2026-11-03":["beperkt","Vroeg op pad en een lange rijdag"],
+  "2026-11-04":["beperkt","Ochtend op zee"],
+  "2026-11-05":["goed",""],"2026-11-06":["goed",""],"2026-11-07":["goed",""],"2026-11-08":["goed",""],
+  "2026-11-09":["goed",""],"2026-11-10":["goed",""],
+  "2026-11-11":["goed","Vanaf 21:00 onderweg naar de luchthaven"],
+  "2026-11-12":["beperkt","Nachtvlucht, landing 11:15"]
+};
+const REACH_LBL={goed:"Goed bereikbaar",beperkt:"Beperkt bereikbaar",niet:"Niet bereikbaar"};
+function reachTag(d){const r=REACH[d]; if(!r) return ""; return `<span class="tag reach r-${r[0]}">${REACH_LBL[r[0]]}${r[1]?` · ${esc(r[1])}`:""}</span>`;}
+
+/* Kaart: geprojecteerde omtrekken (Natural Earth) en stops */
+const MAP = {"W":1000,"H":900,"paths":{"Zimbabwe":"M890.0,52.7L884.8,49.0L877.8,46.5L868.7,45.4L856.9,45.9L842.6,47.9L827.1,45.4L810.6,38.4L796.7,35.8L780.4,38.9L779.5,39.0L776.8,36.6L772.3,31.5L764.8,30.6L762.8,29.3L761.1,27.5L759.9,25.0L759.5,22.4L760.7,13.8L760.1,12.9L758.0,11.9L754.1,10.9L744.1,7.1L731.7,3.3L711.7,-0.7L703.8,-1.8L701.9,-3.0L699.7,-6.1L695.7,-15.8L692.2,-22.2L683.5,-32.1L682.1,-35.2L682.5,-43.1L683.3,-49.4L684.1,-54.7L683.7,-59.9L683.5,-66.0L683.9,-70.2L682.7,-72.1L679.6,-73.3L670.7,-73.9L659.7,-73.7L659.5,-80.0L658.5,-89.9L656.4,-95.6L653.9,-98.5L649.0,-101.6L638.8,-105.8L625.2,-112.2L613.4,-121.7L600.1,-133.4L595.8,-135.5L590.8,-146.6L583.4,-165.5L583.8,-171.8L582.8,-174.8L575.3,-184.2L573.9,-189.0L572.4,-193.9L560.8,-207.6L556.9,-213.5L553.8,-221.2L550.9,-227.2L548.2,-229.7L544.9,-233.8L542.6,-238.6L541.6,-242.1L542.4,-246.8L543.7,-250.1L554.6,-246.7L560.8,-246.5L565.6,-248.1L571.4,-245.9L578.4,-239.8L586.1,-238.5L594.1,-242.4L605.3,-241.2L619.4,-235.1L631.0,-233.8L644.8,-239.3L657.2,-254.4L668.8,-268.6L680.2,-285.0L687.2,-298.3L697.2,-309.1L710.6,-317.4L724.1,-324.4L744.8,-333.1L749.1,-340.1L750.3,-347.9L750.3,-358.6L751.4,-365.6L753.7,-368.8L757.0,-371.3L761.5,-374.5L775.2,-382.7L786.6,-387.9L800.6,-391.4L815.7,-391.4L830.4,-391.4L838.9,-391.5L838.9,-381.1L839.5,-369.5L841.2,-368.3L852.4,-368.1L870.1,-367.2L887.1,-366.4L898.1,-357.9L901.8,-356.2L913.2,-353.9L927.7,-339.8L945.0,-338.5L957.0,-334.1L967.6,-329.3L973.6,-323.5L977.5,-322.1L982.9,-321.7L985.6,-321.2L985.0,-317.0L981.5,-309.9L981.9,-299.8L986.8,-285.7L987.5,-273.5L985.8,-252.0L986.0,-231.1L986.4,-223.7L987.2,-218.8L988.3,-216.0L988.1,-212.9L985.2,-204.2L982.9,-194.9L982.7,-191.3L981.9,-188.6L980.2,-186.4L972.6,-182.1L971.3,-179.5L971.3,-174.7L972.1,-170.7L975.0,-169.3L978.6,-167.0L979.8,-164.0L979.8,-160.8L978.8,-155.0L975.7,-145.3L978.8,-134.1L982.3,-126.9L986.8,-118.6L988.9,-113.5L988.7,-109.7L988.1,-106.2L981.0,-90.9L975.9,-81.4L969.7,-71.3L961.4,-64.9L959.3,-61.8L958.5,-58.3L958.7,-50.6L958.5,-42.7L951.5,-30.4L955.8,-19.9L954.8,-18.9L952.3,-17.4L942.1,-5.6L932.0,6.4L924.6,15.2L915.9,25.2L906.4,36.4L898.3,45.9L890.0,52.7Z","eSwatini":"M928.1,286.4L929.3,287.3L934.5,290.3L934.9,296.4L934.5,303.2L933.5,307.6L933.9,311.9L935.5,318.6L937.2,323.3L937.6,344.3L935.7,343.3L932.4,342.5L930.8,342.8L929.1,352.3L927.9,366.2L928.7,375.0L916.3,375.2L900.6,374.3L889.4,370.5L877.2,362.2L869.9,349.3L866.8,341.2L862.5,340.8L861.7,339.4L861.2,329.5L861.5,319.1L862.3,316.2L870.4,303.5L875.5,295.6L878.6,287.8L885.5,278.8L892.9,273.0L895.6,272.2L897.5,272.4L910.3,280.4L923.7,288.0L926.6,287.0L928.1,286.4Z","South Africa":"M779.5,39.0L780.4,38.9L796.7,35.8L810.6,38.4L827.1,45.4L842.6,47.9L856.9,45.9L868.7,45.4L877.8,46.5L884.8,49.0L890.0,52.7L890.4,56.2L890.8,57.8L893.5,66.9L897.7,80.5L900.4,93.1L904.1,110.3L904.1,119.9L904.9,123.7L908.2,128.4L912.4,136.3L913.8,140.8L915.2,144.2L919.6,150.6L922.9,160.3L925.8,173.2L928.3,179.4L929.1,182.4L930.1,188.0L930.1,199.7L930.1,213.1L930.1,228.3L930.4,240.7L929.9,247.0L930.1,264.9L926.4,274.3L926.8,281.6L928.1,286.4L926.6,287.0L923.7,288.0L910.3,280.4L897.5,272.4L895.6,272.2L892.9,273.0L885.5,278.8L878.6,287.8L875.5,295.6L870.4,303.5L862.3,316.2L861.5,319.1L861.2,329.5L861.7,339.4L862.5,340.8L866.8,341.2L869.9,349.3L877.2,362.2L889.4,370.5L900.6,374.3L916.3,375.2L928.7,375.0L927.9,366.2L929.1,352.3L930.8,342.8L932.4,342.5L935.7,343.3L937.6,344.3L942.6,343.8L951.2,345.8L958.5,345.6L964.9,345.3L975.7,345.0L981.9,345.0L979.8,360.2L971.5,383.9L968.8,394.7L961.8,433.6L952.7,453.2L947.5,461.3L932.6,475.7L928.5,478.6L924.8,480.5L918.4,482.1L892.9,511.1L883.4,525.1L874.9,545.4L866.6,556.6L854.2,580.5L843.2,598.9L832.7,615.7L814.5,638.8L806.4,645.6L800.8,648.5L786.4,662.0L765.9,683.6L750.3,702.7L727.0,724.4L713.5,734.0L693.0,752.7L687.5,755.4L664.5,772.8L648.1,783.4L621.5,795.6L610.9,799.0L585.7,795.8L575.1,797.5L566.2,804.9L565.4,815.5L561.7,817.1L556.1,816.7L538.5,812.2L529.0,813.0L523.4,818.7L518.8,825.9L505.6,826.3L481.8,818.8L453.9,814.3L447.5,813.8L434.0,819.3L429.2,820.1L409.6,819.0L398.6,815.4L388.1,815.4L380.2,818.4L370.5,819.3L344.2,839.3L330.6,839.3L319.0,841.7L313.2,841.5L302.2,838.8L298.3,838.9L292.1,840.2L285.9,843.7L271.8,845.2L266.4,848.3L242.6,866.4L237.2,865.7L232.7,864.5L220.5,864.4L206.4,854.5L201.0,855.2L202.5,852.3L202.9,847.1L200.0,843.5L197.9,841.9L192.6,842.2L189.7,837.8L181.2,837.4L178.3,838.5L174.1,838.7L173.9,834.2L174.1,831.5L173.9,827.2L172.9,821.9L169.6,820.2L167.1,819.5L161.3,819.9L157.2,820.4L155.1,822.0L153.0,825.8L153.0,837.6L149.9,834.2L146.6,827.2L145.6,819.6L146.8,810.7L153.2,807.4L152.6,801.4L151.4,796.3L144.1,782.9L141.4,776.8L135.4,772.6L130.7,762.7L125.9,759.1L124.1,752.1L119.5,746.5L117.9,737.7L120.3,732.7L124.5,730.0L128.6,734.3L133.6,732.6L140.8,726.2L145.2,716.5L145.4,701.1L144.3,691.4L138.6,666.4L135.9,660.7L122.8,642.8L107.9,618.9L88.9,581.2L79.8,558.5L66.1,512.8L53.9,486.9L39.0,462.7L37.2,461.1L39.4,458.1L47.5,452.6L51.0,451.1L53.1,451.8L55.0,450.3L56.8,446.5L57.2,443.0L58.1,438.0L59.9,434.9L61.8,428.9L65.1,425.1L72.1,422.6L77.5,426.0L79.8,429.3L80.8,433.6L83.1,435.7L86.8,435.6L89.5,438.3L91.2,443.8L90.8,447.8L88.7,450.3L88.9,453.5L91.8,457.5L92.8,461.3L94.7,466.5L104.4,469.3L109.2,471.0L117.2,471.6L125.1,473.9L132.3,477.8L144.3,478.8L160.9,476.7L174.6,477.7L185.3,481.5L193.2,482.2L198.1,479.8L200.2,476.3L199.6,471.6L201.9,468.8L207.2,467.5L211.6,464.0L214.9,458.3L222.6,453.7L234.3,450.0L240.3,450.2L240.3,440.9L240.3,411.7L240.3,382.5L240.3,353.2L240.3,324.0L240.3,294.8L240.3,265.6L240.3,236.4L240.3,208.8L243.0,210.7L261.2,225.3L266.2,233.1L268.5,238.0L276.3,255.7L282.1,271.6L286.9,283.6L287.3,289.1L287.9,294.5L288.8,297.1L288.1,299.9L284.8,306.4L281.5,311.4L277.4,318.3L277.0,327.3L278.2,337.9L280.7,343.2L284.0,344.9L291.4,342.2L296.2,343.0L302.8,345.1L325.0,343.8L327.7,344.5L335.9,345.2L338.8,344.4L341.3,342.1L344.2,335.7L346.7,333.7L351.4,332.7L357.0,331.0L361.6,327.2L368.8,314.6L383.3,303.5L387.9,300.8L390.8,297.9L393.0,293.8L398.2,279.7L402.1,268.0L403.4,262.5L406.9,253.5L411.0,247.8L415.0,244.7L417.0,243.9L422.4,242.4L429.0,241.0L436.1,242.5L443.7,246.1L452.4,251.9L461.1,259.2L465.2,262.9L469.6,264.6L477.2,265.1L482.4,265.0L490.3,272.2L494.2,272.7L503.3,274.8L514.3,277.1L521.3,276.9L528.8,273.0L534.1,272.8L541.0,273.1L548.6,272.0L554.2,270.4L558.6,267.0L562.3,263.2L566.6,252.1L569.1,243.2L573.0,233.1L577.8,219.2L579.5,209.5L581.1,206.8L587.9,203.9L593.7,201.8L609.0,198.1L612.1,196.0L615.0,191.4L621.7,183.7L629.9,177.2L634.3,173.5L641.9,142.2L643.0,138.3L648.6,130.0L652.1,126.4L654.3,126.4L657.5,124.1L661.6,119.9L666.6,117.2L672.3,116.2L676.1,113.3L677.7,108.6L680.6,106.3L685.0,106.5L687.2,105.0L687.9,101.8L690.3,99.0L694.9,96.9L697.2,94.3L697.4,91.2L702.8,83.6L713.3,71.9L723.0,65.3L732.3,63.9L741.0,61.5L749.3,57.9L755.5,52.3L759.5,44.6L766.1,40.3L779.5,39.0ZM743.5,558.6L752.8,554.5L757.2,551.9L760.3,549.9L764.2,546.7L765.7,538.9L766.7,532.3L769.8,529.1L772.9,526.9L775.6,523.5L778.7,515.3L780.8,507.3L781.2,504.0L779.9,500.6L777.9,497.0L776.0,492.1L773.5,491.5L768.8,488.7L761.9,483.2L755.9,478.5L750.3,471.5L748.1,470.5L742.7,465.7L740.2,463.1L738.6,459.9L737.1,458.7L734.6,459.6L728.2,461.0L714.6,466.6L706.1,471.8L698.8,477.9L691.4,480.3L686.0,482.3L681.7,489.3L677.5,495.9L674.0,501.7L671.9,504.5L670.1,506.2L668.0,509.9L664.3,516.2L660.6,520.4L655.6,522.7L649.2,525.7L646.9,527.4L646.7,529.9L649.0,535.8L651.2,541.4L654.8,548.2L657.5,552.9L661.6,558.9L664.1,562.4L663.9,568.2L664.7,570.3L665.9,572.7L667.2,573.4L668.4,574.2L671.9,575.9L672.8,577.0L675.2,578.9L677.5,582.6L682.1,587.6L687.0,591.4L695.5,593.0L702.1,594.1L704.4,593.4L706.7,590.4L708.6,586.5L709.2,581.6L711.2,578.9L719.3,566.3L723.7,561.6L726.3,561.4L729.9,560.5L734.2,560.0L737.5,560.5L738.3,560.2L743.5,558.6ZM1267.6,1665.4L1265.1,1666.6L1253.5,1665.5L1252.3,1663.0L1255.8,1659.1L1257.7,1657.5L1263.7,1658.3L1268.6,1661.5L1269.5,1662.5L1267.6,1665.4Z","Namibia":"M435.7,-260.2L448.1,-262.9L459.7,-265.4L473.3,-268.0L484.3,-270.1L487.0,-270.7L513.5,-268.3L524.8,-266.6L528.8,-265.0L533.9,-260.6L543.7,-250.1L541.2,-250.5L523.6,-248.3L516.8,-245.5L501.7,-233.1L498.6,-234.7L495.0,-237.2L491.9,-238.0L485.3,-235.0L478.7,-231.4L471.5,-226.4L465.5,-221.5L463.4,-218.9L454.1,-208.7L451.0,-207.0L448.3,-206.3L447.2,-206.8L446.0,-211.1L440.2,-221.4L430.9,-234.7L428.2,-236.1L426.3,-236.6L419.5,-235.9L399.7,-232.1L382.7,-228.9L357.0,-223.6L329.3,-219.1L312.1,-216.4L297.4,-215.6L297.4,-202.3L297.4,-175.5L297.4,-148.7L297.4,-121.9L297.4,-95.1L297.7,-68.3L297.7,-41.5L297.7,-14.7L297.7,12.1L297.7,23.8L297.2,26.3L288.8,26.3L269.3,26.3L253.2,26.3L240.1,26.3L240.1,42.2L240.1,61.1L240.1,79.9L240.1,98.7L240.1,117.5L240.1,136.3L240.1,155.3L240.1,174.1L240.1,192.9L240.3,207.1L240.3,208.8L240.3,236.4L240.3,265.6L240.3,294.8L240.3,324.0L240.3,353.2L240.3,382.5L240.3,411.7L240.3,440.9L240.3,450.2L234.3,450.0L222.6,453.7L214.9,458.3L211.6,464.0L207.2,467.5L201.9,468.8L199.6,471.6L200.2,476.3L198.1,479.8L193.2,482.2L185.3,481.5L174.6,477.7L160.9,476.7L144.3,478.8L132.3,477.8L125.1,473.9L117.2,471.6L109.2,471.0L104.4,469.3L94.7,466.5L92.8,461.3L91.8,457.5L88.9,453.5L88.7,450.3L90.8,447.8L91.2,443.8L89.5,438.3L86.8,435.6L83.1,435.7L80.8,433.6L79.8,429.3L77.5,426.0L72.1,422.6L65.1,425.1L61.8,428.9L59.9,434.9L58.1,438.0L57.2,443.0L56.8,446.5L55.0,450.3L53.1,451.8L51.0,451.1L47.5,452.6L39.4,458.1L37.2,461.1L30.8,455.8L11.9,435.8L5.3,430.5L-4.6,418.3L-26.3,380.2L-29.5,372.9L-33.6,354.6L-38.3,340.9L-39.0,333.0L-36.7,328.6L-37.9,322.5L-40.4,317.2L-47.9,310.1L-49.9,286.4L-54.9,271.1L-53.9,258.5L-56.1,247.0L-56.3,239.6L-55.3,225.6L-59.2,209.5L-67.3,193.7L-74.6,171.0L-75.6,161.0L-75.0,134.2L-76.2,123.3L-76.2,110.5L-79.1,97.1L-80.3,89.9L-78.3,84.1L-77.0,85.9L-75.0,86.8L-73.5,79.2L-73.3,72.5L-76.8,55.8L-84.9,38.8L-105.0,11.0L-109.9,0.5L-112.6,-8.3L-135.0,-44.9L-144.5,-70.7L-151.3,-93.1L-158.6,-103.3L-192.1,-175.6L-199.5,-187.2L-213.0,-201.0L-216.1,-205.6L-221.2,-218.8L-231.2,-236.4L-233.7,-252.9L-234.5,-271.6L-233.2,-285.8L-223.9,-287.4L-217.5,-291.2L-211.7,-291.4L-206.1,-288.5L-200.1,-288.2L-197.7,-288.7L-186.9,-288.3L-180.7,-291.8L-173.2,-295.2L-169.1,-298.2L-163.1,-301.2L-155.0,-304.4L-150.7,-304.1L-145.1,-302.9L-137.7,-301.8L-133.5,-299.6L-128.6,-293.0L-121.1,-287.0L-115.3,-283.3L-108.9,-278.5L-107.0,-276.7L-104.1,-275.7L-102.5,-275.3L-90.5,-276.1L-79.5,-276.8L-67.9,-276.8L-46.0,-276.7L-23.9,-276.7L-1.9,-276.7L20.0,-276.6L41.9,-276.6L64.1,-276.6L86.0,-276.5L107.9,-276.5L117.0,-276.5L132.8,-276.3L149.3,-276.0L151.0,-275.7L152.8,-274.3L154.5,-273.2L160.3,-264.8L167.7,-256.1L173.9,-252.0L181.4,-249.4L188.2,-248.5L194.8,-249.1L205.6,-248.1L220.7,-245.2L236.4,-244.3L252.6,-245.6L263.9,-244.0L270.6,-239.6L277.4,-236.8L284.2,-235.3L293.5,-236.2L305.3,-239.4L315.4,-239.0L320.0,-236.6L322.9,-236.6L340.1,-240.0L354.1,-242.8L375.0,-247.3L392.2,-250.9L417.7,-256.3L435.7,-260.2Z","Mozambique":"M890.0,52.7L898.3,45.9L906.4,36.4L915.9,25.2L924.6,15.2L932.0,6.4L942.1,-5.6L952.3,-17.4L954.8,-18.9L955.8,-19.9L951.5,-30.4L958.5,-42.7L958.7,-50.6L958.5,-58.3L959.3,-61.8L961.4,-64.9L969.7,-71.3L975.9,-81.4L981.0,-90.9L988.1,-106.2L988.7,-109.7L988.9,-113.5L986.8,-118.6L982.3,-126.9L978.8,-134.1L975.7,-145.3L978.8,-155.0L979.8,-160.8L979.8,-164.0L978.6,-167.0L975.0,-169.3L972.1,-170.7L971.3,-174.7L971.3,-179.5L972.6,-182.1L980.2,-186.4L981.9,-188.6L982.7,-191.3L982.9,-194.9L985.2,-204.2L988.1,-212.9L988.3,-216.0L987.2,-218.8L986.4,-223.7L986.0,-231.1L985.8,-252.0L987.5,-273.5L986.8,-285.7L981.9,-299.8L981.5,-309.9L985.0,-317.0L985.6,-321.2L982.9,-321.7L977.5,-322.1L973.6,-323.5L967.6,-329.3L957.0,-334.1L945.0,-338.5L927.7,-339.8L913.2,-353.9L901.8,-356.2L898.1,-357.9L887.1,-366.4L870.1,-367.2L852.4,-368.1L841.2,-368.3L839.5,-369.5L838.9,-381.1L838.9,-391.5L837.9,-400.5L836.2,-410.7L833.7,-414.7L830.6,-421.7L829.0,-429.3L828.8,-433.0L829.4,-434.4L841.8,-439.7L847.0,-442.5L854.8,-445.5L868.7,-449.9L881.1,-453.8L892.5,-457.5L904.5,-461.5L909.5,-464.1L915.5,-466.8L929.9,-472.1L934.1,-473.9L942.6,-477.0L946.7,-478.2L962.8,-484.3L981.2,-491.4L987.7,-493.8L1000.1,-498.5L1002.6,-496.5L1010.8,-480.3L1017.5,-470.9L1025.1,-462.1L1026.4,-462.5L1028.4,-464.6L1032.4,-465.4L1044.1,-467.4L1048.9,-467.6L1051.8,-469.8L1058.0,-471.5L1065.0,-472.6L1067.5,-471.4L1075.0,-460.1L1076.0,-451.4L1077.7,-438.8L1078.1,-432.6L1077.9,-424.4L1077.0,-414.2L1071.0,-402.3L1069.8,-396.5L1066.5,-387.4L1062.1,-382.9L1060.1,-379.1L1060.3,-375.4L1062.6,-372.2L1067.5,-366.4L1069.2,-362.7L1068.8,-359.4L1068.8,-354.8L1070.0,-351.8L1071.2,-349.9L1076.4,-347.0L1081.2,-339.6L1089.7,-330.7L1099.6,-318.0L1104.4,-314.1L1108.1,-313.2L1109.9,-308.9L1108.9,-304.0L1106.0,-301.1L1107.3,-297.1L1108.7,-295.0L1110.6,-293.9L1115.1,-293.7L1119.0,-294.5L1120.1,-295.9L1119.7,-314.9L1116.6,-326.0L1113.7,-330.3L1113.0,-331.1L1114.1,-334.8L1117.4,-343.3L1120.3,-351.8L1121.9,-355.3L1124.0,-357.5L1137.9,-359.8L1144.3,-361.7L1146.8,-364.1L1148.8,-370.7L1150.5,-389.0L1151.1,-406.2L1149.7,-416.2L1151.7,-431.4L1154.8,-440.7L1153.2,-442.7L1152.1,-455.3L1143.0,-468.8L1131.5,-486.1L1125.0,-495.5L1117.6,-506.2L1104.1,-522.9L1098.1,-528.8L1094.8,-531.2L1084.1,-533.1L1081.2,-536.3L1078.3,-541.5L1077.2,-550.9L1077.2,-558.0L1076.0,-570.0L1073.7,-587.0L1072.7,-592.0L1069.6,-604.8L1066.7,-617.0L1066.5,-620.0L1067.5,-622.9L1072.5,-631.9L1076.2,-638.2L1077.9,-641.7L1080.8,-651.2L1081.6,-655.8L1083.9,-657.8L1093.4,-658.7L1101.0,-658.5L1113.9,-658.7L1127.5,-658.2L1129.4,-657.8L1132.5,-656.8L1135.8,-656.9L1139.7,-658.3L1143.9,-661.6L1148.6,-666.7L1155.9,-666.6L1165.6,-661.2L1171.0,-656.5L1172.0,-652.5L1178.4,-650.1L1190.6,-649.5L1199.7,-651.6L1205.3,-656.5L1211.1,-659.0L1217.1,-659.3L1221.9,-657.6L1225.0,-653.9L1231.0,-651.4L1239.9,-649.8L1249.6,-652.1L1260.1,-658.4L1266.1,-664.9L1267.6,-671.6L1269.3,-675.7L1271.3,-677.1L1276.9,-678.0L1286.0,-678.2L1293.9,-676.1L1304.2,-669.3L1310.6,-673.8L1321.6,-681.4L1332.6,-685.5L1343.1,-685.5L1351.8,-688.5L1358.6,-694.2L1365.7,-698.0L1373.3,-699.5L1380.4,-702.3L1390.1,-708.2L1400.4,-717.0L1410.8,-726.0L1417.4,-731.7L1420.5,-724.9L1425.9,-718.7L1422.8,-715.2L1418.8,-712.0L1425.0,-707.7L1420.5,-701.2L1419.9,-696.6L1421.1,-694.9L1422.1,-692.2L1419.0,-684.7L1414.9,-679.0L1413.9,-674.7L1417.6,-667.0L1415.7,-653.4L1419.3,-641.1L1420.1,-634.8L1421.3,-630.6L1419.7,-622.9L1420.1,-610.3L1420.9,-605.0L1418.8,-598.5L1422.4,-596.2L1424.2,-589.0L1423.6,-580.9L1422.6,-576.6L1416.6,-571.4L1415.7,-569.3L1415.9,-566.2L1423.4,-566.1L1423.8,-561.3L1423.2,-557.6L1423.6,-550.4L1422.6,-545.8L1424.2,-540.6L1422.1,-534.7L1423.0,-530.2L1423.0,-524.4L1424.8,-509.5L1425.0,-491.3L1425.5,-488.4L1428.1,-486.4L1431.9,-485.3L1431.9,-480.3L1427.5,-473.7L1427.3,-469.7L1427.9,-464.0L1432.5,-471.8L1435.4,-471.7L1437.9,-468.7L1437.5,-464.2L1438.3,-462.0L1437.9,-457.6L1439.3,-452.2L1438.7,-447.4L1435.4,-444.1L1431.0,-438.4L1430.2,-432.9L1430.6,-429.5L1427.7,-428.3L1426.3,-426.1L1428.4,-421.0L1428.1,-416.6L1423.0,-402.5L1408.9,-383.5L1402.7,-376.8L1397.1,-369.3L1397.1,-366.3L1396.5,-363.6L1389.9,-353.1L1382.8,-351.4L1378.7,-348.6L1381.8,-339.3L1377.3,-337.2L1369.2,-329.9L1347.3,-316.0L1343.7,-312.6L1338.1,-304.1L1330.9,-301.9L1326.8,-299.5L1319.3,-298.6L1316.8,-299.3L1314.4,-299.0L1312.3,-297.1L1297.8,-291.1L1284.1,-286.3L1280.8,-284.1L1278.6,-281.2L1266.6,-276.5L1247.7,-264.7L1232.4,-253.7L1221.3,-242.5L1218.4,-240.8L1214.8,-237.0L1213.8,-231.3L1212.6,-228.1L1204.3,-216.4L1191.9,-202.6L1189.6,-198.7L1184.6,-191.0L1184.2,-186.0L1179.7,-184.4L1175.9,-189.2L1174.5,-180.0L1171.4,-179.3L1168.1,-181.2L1159.8,-176.6L1152.6,-171.3L1141.0,-160.1L1124.4,-138.3L1100.4,-117.5L1097.1,-116.9L1095.0,-116.9L1087.4,-124.2L1083.2,-124.8L1087.0,-120.4L1089.5,-116.8L1088.8,-109.8L1089.0,-99.2L1086.1,-78.6L1086.6,-74.0L1089.9,-68.2L1096.3,-61.1L1102.5,-52.1L1110.1,-26.5L1110.8,-13.4L1118.8,3.3L1119.0,10.6L1122.4,28.8L1122.1,43.4L1121.5,52.4L1125.5,56.2L1126.9,52.7L1126.5,47.0L1127.5,37.9L1129.6,33.9L1131.9,34.5L1132.5,38.8L1133.9,42.6L1134.6,46.1L1134.6,51.0L1131.7,69.5L1132.5,77.0L1136.4,89.6L1131.9,104.2L1125.0,138.5L1124.8,144.4L1126.3,147.1L1130.0,147.9L1131.3,143.5L1133.5,143.5L1134.6,146.2L1131.7,162.0L1128.6,169.0L1118.0,186.0L1112.4,193.3L1102.9,200.5L1081.0,211.6L1036.5,227.8L1018.9,235.8L1008.6,240.6L986.2,255.7L976.5,265.7L972.6,277.3L968.6,282.7L964.9,289.4L968.2,295.1L971.5,299.6L975.2,302.4L977.3,304.9L979.8,306.8L982.5,297.6L983.7,294.8L986.0,294.6L984.8,305.7L982.1,343.7L981.9,345.0L975.7,345.0L964.9,345.3L958.5,345.6L951.2,345.8L942.6,343.8L937.6,344.3L937.2,323.3L935.5,318.6L933.9,311.9L933.5,307.6L934.5,303.2L934.9,296.4L934.5,290.3L929.3,287.3L928.1,286.4L926.8,281.6L926.4,274.3L930.1,264.9L929.9,247.0L930.4,240.7L930.1,228.3L930.1,213.1L930.1,199.7L930.1,188.0L929.1,182.4L928.3,179.4L925.8,173.2L922.9,160.3L919.6,150.6L915.2,144.2L913.8,140.8L912.4,136.3L908.2,128.4L904.9,123.7L904.1,119.9L904.1,110.3L900.4,93.1L897.7,80.5L893.5,66.9L890.8,57.8L890.4,56.2L890.0,52.7ZM1082.8,-629.9L1081.8,-631.8L1079.9,-632.7L1077.9,-631.9L1077.0,-629.5L1079.3,-626.5L1081.8,-626.5L1082.8,-629.9ZM1087.4,-623.5L1088.8,-625.0L1089.5,-626.9L1089.5,-628.7L1088.4,-630.0L1087.0,-630.7L1085.1,-630.2L1084.3,-627.7L1084.1,-624.2L1085.3,-623.0L1087.4,-623.5Z","Lesotho":"M743.5,558.6L738.3,560.2L737.5,560.5L734.2,560.0L729.9,560.5L726.3,561.4L723.7,561.6L719.3,566.3L711.2,578.9L709.2,581.6L708.6,586.5L706.7,590.4L704.4,593.4L702.1,594.1L695.5,593.0L687.0,591.4L682.1,587.6L677.5,582.6L675.2,578.9L672.8,577.0L671.9,575.9L668.4,574.2L667.2,573.4L665.9,572.7L664.7,570.3L663.9,568.2L664.1,562.4L661.6,558.9L657.5,552.9L654.8,548.2L651.2,541.4L649.0,535.8L646.7,529.9L646.9,527.4L649.2,525.7L655.6,522.7L660.6,520.4L664.3,516.2L668.0,509.9L670.1,506.2L671.9,504.5L674.0,501.7L677.5,495.9L681.7,489.3L686.0,482.3L691.4,480.3L698.8,477.9L706.1,471.8L714.6,466.6L728.2,461.0L734.6,459.6L737.1,458.7L738.6,459.9L740.2,463.1L742.7,465.7L748.1,470.5L750.3,471.5L755.9,478.5L761.9,483.2L768.8,488.7L773.5,491.5L776.0,492.1L777.9,497.0L779.9,500.6L781.2,504.0L780.8,507.3L778.7,515.3L775.6,523.5L772.9,526.9L769.8,529.1L766.7,532.3L765.7,538.9L764.2,546.7L760.3,549.9L757.2,551.9L752.8,554.5L743.5,558.6Z","Botswana":"M543.7,-250.1L542.4,-246.8L541.6,-242.1L542.6,-238.6L544.9,-233.8L548.2,-229.7L550.9,-227.2L553.8,-221.2L556.9,-213.5L560.8,-207.6L572.4,-193.9L573.9,-189.0L575.3,-184.2L582.8,-174.8L583.8,-171.8L583.4,-165.5L590.8,-146.6L595.8,-135.5L600.1,-133.4L613.4,-121.7L625.2,-112.2L638.8,-105.8L649.0,-101.6L653.9,-98.5L656.4,-95.6L658.5,-89.9L659.5,-80.0L659.7,-73.7L670.7,-73.9L679.6,-73.3L682.7,-72.1L683.9,-70.2L683.5,-66.0L683.7,-59.9L684.1,-54.7L683.3,-49.4L682.5,-43.1L682.1,-35.2L683.5,-32.1L692.2,-22.2L695.7,-15.8L699.7,-6.1L701.9,-3.0L703.8,-1.8L711.7,-0.7L731.7,3.3L744.1,7.1L754.1,10.9L758.0,11.9L760.1,12.9L760.7,13.8L759.5,22.4L759.9,25.0L761.1,27.5L762.8,29.3L764.8,30.6L772.3,31.5L776.8,36.6L779.5,39.0L766.1,40.3L759.5,44.6L755.5,52.3L749.3,57.9L741.0,61.5L732.3,63.9L723.0,65.3L713.3,71.9L702.8,83.6L697.4,91.2L697.2,94.3L694.9,96.9L690.3,99.0L687.9,101.8L687.2,105.0L685.0,106.5L680.6,106.3L677.7,108.6L676.1,113.3L672.3,116.2L666.6,117.2L661.6,119.9L657.5,124.1L654.3,126.4L652.1,126.4L648.6,130.0L643.0,138.3L641.9,142.2L634.3,173.5L629.9,177.2L621.7,183.7L615.0,191.4L612.1,196.0L609.0,198.1L593.7,201.8L587.9,203.9L581.1,206.8L579.5,209.5L577.8,219.2L573.0,233.1L569.1,243.2L566.6,252.1L562.3,263.2L558.6,267.0L554.2,270.4L548.6,272.0L541.0,273.1L534.1,272.8L528.8,273.0L521.3,276.9L514.3,277.1L503.3,274.8L494.2,272.7L490.3,272.2L482.4,265.0L477.2,265.1L469.6,264.6L465.2,262.9L461.1,259.2L452.4,251.9L443.7,246.1L436.1,242.5L429.0,241.0L422.4,242.4L417.0,243.9L415.0,244.7L411.0,247.8L406.9,253.5L403.4,262.5L402.1,268.0L398.2,279.7L393.0,293.8L390.8,297.9L387.9,300.8L383.3,303.5L368.8,314.6L361.6,327.2L357.0,331.0L351.4,332.7L346.7,333.7L344.2,335.7L341.3,342.1L338.8,344.4L335.9,345.2L327.7,344.5L325.0,343.8L302.8,345.1L296.2,343.0L291.4,342.2L284.0,344.9L280.7,343.2L278.2,337.9L277.0,327.3L277.4,318.3L281.5,311.4L284.8,306.4L288.1,299.9L288.8,297.1L287.9,294.5L287.3,289.1L286.9,283.6L282.1,271.6L276.3,255.7L268.5,238.0L266.2,233.1L261.2,225.3L243.0,210.7L240.3,208.8L240.3,207.1L240.1,192.9L240.1,174.1L240.1,155.3L240.1,136.3L240.1,117.5L240.1,98.7L240.1,79.9L240.1,61.1L240.1,42.2L240.1,26.3L253.2,26.3L269.3,26.3L288.8,26.3L297.2,26.3L297.7,23.8L297.7,12.1L297.7,-14.7L297.7,-41.5L297.7,-68.3L297.4,-95.1L297.4,-121.9L297.4,-148.7L297.4,-175.5L297.4,-202.3L297.4,-215.6L312.1,-216.4L329.3,-219.1L357.0,-223.6L382.7,-228.9L399.7,-232.1L419.5,-235.9L426.3,-236.6L428.2,-236.1L430.9,-234.7L440.2,-221.4L446.0,-211.1L447.2,-206.8L448.3,-206.3L451.0,-207.0L454.1,-208.7L463.4,-218.9L465.5,-221.5L471.5,-226.4L478.7,-231.4L485.3,-235.0L491.9,-238.0L495.0,-237.2L498.6,-234.7L501.7,-233.1L516.8,-245.5L523.6,-248.3L541.2,-250.5L543.7,-250.1Z"},"pts":{"jnb":[715,298.1],"dull":[822,250.9],"kar":[850.9,172.5],"oli":[866.1,167.6],"hoed":[871.6,181],"hds":[876.4,181.9],"grj":[378.1,815.2],"plet":[435.1,818.5],"oudt":[368.7,783.9],"herm":[197.9,842.3],"klein":[204.4,855.2],"fran":[191.7,808.6],"cpt":[148.2,811.7],"cptair":[161,812.9]}};
+const STOPS = [
+  { k:"jnb",  label:"Johannesburg", sub:"22 okt", day:"2026-10-22", phase:"joburg", lx:-16, ly:8, anchor:"end" },
+  { k:"kar",  label:"Safari Limpopo", sub:"23 tot 29 okt", day:"2026-10-23", phase:"safari", lx:-26, ly:-16, anchor:"end" },
+  { k:"oli",  phase:"safari", day:"2026-10-25", r:7 },
+  { k:"hoed", phase:"safari", day:"2026-10-27", r:7 },
+  { k:"plet", label:"Plettenberg Bay", sub:"29 okt tot 2 nov", day:"2026-10-29", phase:"tuin", lx:14, ly:36, anchor:"start" },
+  { k:"grj",  phase:"tuin", day:"2026-10-29", r:6 },
+  { k:"oudt", label:"Oudtshoorn", sub:"2 nov", day:"2026-11-02", phase:"karoo", lx:-29, ly:-42, anchor:"middle" },
+  { k:"herm", label:"Hermanus", sub:"3 nov", day:"2026-11-03", phase:"walvis", lx:30, ly:4, anchor:"start" },
+  { k:"klein",phase:"walvis", day:"2026-11-04", r:6 },
+  { k:"fran", label:"Franschhoek", sub:"4 tot 7 nov", day:"2026-11-04", phase:"wijn", lx:-32, ly:-44, anchor:"start" },
+  { k:"cpt",  label:"Kaapstad", sub:"7 tot 12 nov", day:"2026-11-07", phase:"kaap", lx:-36, ly:58, anchor:"start" }
+];
+const DRIVE_ROUTES = [["jnb","dull","kar","oli","hoed","hds"],["grj","plet","oudt","herm","klein","herm","fran","cpt"]];
+
+/* ========================================================= */
+const MONTHS=["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
+const DOW=["zo","ma","di","wo","do","vr","za"];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const parse=s=>{const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+const today=(()=>{const t=new Date();return new Date(t.getFullYear(),t.getMonth(),t.getDate())})();
+const todayISO=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
+const phColor=p=>`var(--ph-${p})`;
+const gmaps=(a,b)=>`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(a)}&destination=${encodeURIComponent(b)}&travelmode=driving`;
+const telHref=n=>"tel:"+n.replace(/[^\d+]/g,"");
+
+const TRIP=DAYS.filter(d=>!d.pre);
+(function(){
+  const el=document.getElementById("countdown");
+  const start=parse(TRIP[0].d), end=parse(TRIP[TRIP.length-1].d);
+  const diff=Math.round((start-today)/864e5);
+  if(diff>1) el.textContent=`Nog ${diff} dagen tot vertrek`;
+  else if(diff===1) el.textContent="Morgen vertrekken we";
+  else if(today<=end){const i=TRIP.findIndex(x=>x.d===todayISO);el.textContent=`Dag ${i+1} van ${TRIP.length} · naar vandaag`;el.href="#dag-"+todayISO;}
+  else el.textContent="Terugblik op onze reis";
+})();
+
+(function(){
+  const svg=document.getElementById("map"), P=MAP.pts;
+  let h="";
+  for(const [n,d] of Object.entries(MAP.paths)) h+=`<path class="${n==="South Africa"?"za":"ctry"}" d="${d}"/>`;
+  h+=`<text class="lbl sea" x="700" y="860">Indische Oceaan</text>`;
+  DRIVE_ROUTES.forEach(r=>h+=`<polyline class="drive" points="${r.map(k=>P[k].join(",")).join(" ")}"/>`);
+  const a=P.hds,b=P.grj, mx=(a[0]+b[0])/2+200, my=(a[1]+b[1])/2-120;
+  h+=`<path class="flight" d="M${a[0]},${a[1]} Q${mx},${my} ${b[0]},${b[1]}"/>`;
+  STOPS.forEach(s=>{
+    const [x,y]=P[s.k];
+    h+=`<a href="#dag-${s.day}" aria-label="${esc(s.label||s.k)}"><circle class="stop" cx="${x}" cy="${y}" r="${s.r||11}" style="fill:${phColor(s.phase)}"/>`;
+    if(s.label){
+      h+=`<text class="lbl" x="${x+s.lx}" y="${y+s.ly}" text-anchor="${s.anchor}">${esc(s.label)}</text>`;
+      h+=`<text class="lbl sub" x="${x+s.lx}" y="${y+s.ly+24}" text-anchor="${s.anchor}">${esc(s.sub)}</text>`;
+    }
+    h+=`</a>`;
+  });
+  svg.innerHTML=h;
+})();
+
+(function(){
+  const legsEl=document.getElementById("legs"); if(legsEl) legsEl.innerHTML=LEGS.map(l=>`
+    <a class="leg" href="#dag-${l.day}">
+      <span class="dot" style="background:${phColor(l.phase)}"></span>
+      <span><span class="t">${esc(l.t)}</span><span class="s">${esc(l.s)}</span></span>
+      <span class="n">${esc(l.n)}</span>
+    </a>`).join("");
+})();
+
+(function(){
+  const root=document.getElementById("days");
+  const badge=s=>s==="ok"?'<span class="badge b-ok">Geboekt</span>':s==="res"?'<span class="badge b-res">Gereserveerd</span>':s==="q"?'<span class="badge b-q">Kiezen</span>':"";
+  let html="", last=null;
+  DAYS.forEach((x)=>{
+    const dt=parse(x.d), ph=PHASES[x.phase];
+    const nrLabel=x.pre?"vooraf":`dag ${TRIP.indexOf(x)+1}`;
+    if(x.phase!==last&&!x.pre){html+=`<div class="phase"><span class="chip" style="color:${phColor(x.phase)}">${esc(ph.name)}</span><span class="bar"></span></div>`;last=x.phase;}
+    const isToday=x.d===todayISO, isPast=dt<today;
+    const hasQ=x.todo||x.items.some(it=>it[2]==="q");
+    const hasRes=x.res||x.items.some(it=>it[2]==="res");
+    let tags="";
+    if(isToday) tags+=`<span class="tag today">Vandaag</span>`;
+    if(x.fly) tags+=`<span class="tag fly"><span class="k">Vlucht</span>${esc(x.fly)}</span>`;
+    if(x.drive) tags+=`<span class="tag"><span class="k">Rijden</span>${esc(x.drive)}</span>`;
+    if(x.sleep) tags+=`<span class="tag"><span class="k">Slapen</span>${esc(x.sleep)}</span>`;
+    if(x.basis) tags+=`<span class="tag">${esc(x.basis)}</span>`;
+    if(REACH[x.d]) tags+=reachTag(x.d);
+    const items=x.items.map(it=>`<li><span class="tm">${esc(it[0]||"")}</span><span class="tx">${esc(it[1])}${badge(it[2])}</span></li>`).join("");
+    const nav=(NAV[x.d]||[]).map(([a,b])=>`<a class="navlink" href="${gmaps(a,b)}" target="_blank" rel="noopener">Route naar ${esc(b.replace(/ (Hoedspruit|Karongwe Game Reserve|Karongwe|Plettenberg Bay|Oudtshoorn|Hermanus|Franschhoek|Camps Bay|Kleinbaai|Simon's Town|Tsitsikamma)$/,""))} ↗</a>`).join("");
+    const resto=x.resto?restoBlock(x.resto):"";
+    const ideas=x.ideas?`<details class="ideas"><summary>Ideeën en opties (${x.ideas.length})</summary><ul>${x.ideas.map(v=>`<li>${esc(v)}</li>`).join("")}</ul></details>`:"";
+    html+=`
+      <article class="day ${isToday?"today":""} ${isPast?"past":""}" id="dag-${x.d}" data-q="${hasQ?1:0}" data-res="${hasRes?1:0}" style="border-top:4px solid ${phColor(x.phase)}">
+        <div class="date"><div class="dow">${DOW[dt.getDay()]}</div><div class="dn">${dt.getDate()}</div><div class="mo">${MONTHS[dt.getMonth()]}</div><div class="nr">${nrLabel}</div></div>
+        <div class="body">
+          <h4>${esc(x.title)}</h4>
+          <div class="where">${esc(x.where)}</div>
+          ${isPast?`<button type="button" class="toggle" aria-expanded="false">Toon planning ▾</button>`:""}
+          <div class="more" ${isPast?"hidden":""}>
+          <div class="tags">${tags}</div>
+          <ul class="items">${items}</ul>
+          ${x.warn?`<div class="note warn">${esc(x.warn)}</div>`:""}
+          ${x.note?`<div class="note">${esc(x.note)}</div>`:""}
+          ${(nav||ideas||resto)?`<div class="dayfoot">${nav}${ideas}${resto}</div>`:""}
+          </div>
+        </div>
+      </article>`;
+  });
+  root.innerHTML=html;
+  root.addEventListener("click",e=>{
+    const b=e.target.closest(".toggle"); if(!b) return;
+    const m=b.nextElementSibling, open=m.hidden;
+    m.hidden=!open; b.setAttribute("aria-expanded",open); b.textContent=open?"Verberg planning ▴":"Toon planning ▾";
+  });
+})();
+
+(function(){
+  document.querySelector("#staysTable tbody").innerHTML=STAYS.map(s=>`
+    <tr>
+      <td data-l="Data"><b>${esc(s.from)}</b> tot ${esc(s.to)}</td>
+      <td data-l="Nachten" class="num">${s.n}</td>
+      <td data-l="Accommodatie"><b>${esc(s.name)}</b><div class="sub">${esc(s.place)}</div></td>
+      <td data-l="Kamer en basis">${esc(s.room)}<div class="sub">${esc(s.basis)}</div></td>
+      <td data-l="Adres, telefoon en website">${esc(s.addr)}<div class="sub"><a href="${telHref(s.tel)}">${esc(s.tel)}</a>${s.web?` · <a href="${s.web}" target="_blank" rel="noopener">website ↗</a>`:""} · <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.name+" "+s.place)}" target="_blank" rel="noopener">kaart ↗</a></div></td>
+    </tr>`).join("");
+})();
+
+(function(){
+  document.getElementById("sos").innerHTML=SOS.map(g=>`
+    <div class="sos"><h3>${esc(g.title)}</h3>${g.rows.map(r=>`
+      <div class="row"><div>${esc(r[0])}${r[1]?`<br><span>${esc(r[1])}</span>`:""}</div>
+      <div class="nr"><a href="${telHref(r[2])}">${esc(r[2])}</a><button class="copy" type="button" data-n="${esc(r[2])}">Kopieer</button></div></div>`).join("")}</div>`).join("");
+  document.getElementById("sos").addEventListener("click",e=>{
+    const b=e.target.closest(".copy"); if(!b) return;
+    const done=()=>{b.textContent="Gekopieerd";setTimeout(()=>b.textContent="Kopieer",1500)};
+    const sel=()=>{const r=document.createRange();r.selectNodeContents(b.previousElementSibling);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Geselecteerd"};
+    try{navigator.clipboard.writeText(b.dataset.n).then(done,sel)}catch(err){sel()}
+  });
+})();
+
+/* Checklist en paklijst: gedeeld via de opslag van de pagina, anders op dit apparaat */
+(function(){
+  const KEY="za2026-checks-v2";
+  const ALL=CHECKS.flatMap(g=>g.items);
+  let state={}, ref=null;
+  try{state=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+  const root=document.getElementById("checks"), countEl=document.getElementById("checkCount");
+  let mode="onthouden op dit apparaat";
+  function render(){
+    root.innerHTML=CHECKS.map(g=>{
+      const n=g.items.filter(c=>state[c[0]]).length;
+      return `<h3 class="cgroup">${esc(g.group)}<span>${n} van ${g.items.length}</span></h3>`+g.items.map(c=>`
+      <label class="${state[c[0]]?"done":""}" for="chk-${c[0]}"><input type="checkbox" id="chk-${c[0]}" data-k="${c[0]}" ${state[c[0]]?"checked":""}>
+        <span>${esc(c[1])}${c[2]?`<small>${esc(c[2])}</small>`:""}</span></label>`).join("");
+    }).join("");
+    const done=ALL.filter(c=>state[c[0]]).length;
+    document.getElementById("progressBar").style.width=(done/ALL.length*100)+"%";
+    countEl.textContent=`${done} van ${ALL.length} klaar · ${mode}`;
+  }
+  root.addEventListener("change",async e=>{
+    const k=e.target.dataset.k; if(!k) return;
+    state={...state,[k]:e.target.checked};
+    try{localStorage.setItem(KEY,JSON.stringify(state))}catch(err){}
+    render();
+    if(ref){ try{ await ref.set({done:state}) }catch(err){ mode="opslaan lukte niet, alleen op dit apparaat bewaard"; render(); } }
+  });
+  render();
+  if(window.claude&&window.claude.use){
+    window.claude.use("db").then(d=>{
+      if(!d) return;
+      ref=d.doc("checklist/v2");
+      mode="gedeeld met iedereen die meekijkt";
+      ref.onSnapshot(snap=>{
+        if(snap.exists){ const v=(snap.data()||{}).done; if(v&&typeof v==="object") state={...v}; }
+        render();
+      },()=>{ ref=null; mode="onthouden op dit apparaat"; render(); });
+    }).catch(()=>{});
+  }
+})();
+
+function restoBlock(k){
+  const r=RESTO[k]; if(!r) return "";
+  const li=r.items.map(it=>{
+    const c=it[2]; let link="";
+    if(c&&c.startsWith("http")) link=` · <a href="${esc(c)}" target="_blank" rel="noopener">website ↗</a>`;
+    else if(c) link=` · <a href="${telHref(c)}">${esc(c)}</a>`;
+    return `<li><b>${esc(it[0])}</b><br><span class="rd">${esc(it[1])}${link}</span></li>`;
+  }).join("");
+  return `<details class="ideas resto"><summary>${esc(r.title)} (${r.items.length})</summary><ul>${li}</ul><p class="rsrc">${esc(r.src)}</p></details>`;
+}
+
+/* Tips pagina */
+(function(){
+  const el=document.getElementById("tipsList"); if(!el) return;
+  el.innerHTML=TIPS.map(g=>`<div class="card"><h3>${esc(g.group)}</h3><ul class="tiplist">${g.items.map(t=>{const u=t.length>2?t[1]:"", tx=t.length>2?t[2]:t[1]; return `<li><b>${esc(t[0])}</b><span>${esc(tx)}${u?` · <a href="${u}" target="_blank" rel="noopener">website ↗</a>`:""}</span></li>`;}).join("")}</ul><a class="navlink" href="#dag-${g.day}">Naar de dagplanning</a></div>`).join("");
+  document.getElementById("restoList").innerHTML=["hoed","plet","fran","kaap"].map(restoBlock).join("");
+})();
+
+/* Samenvatting: eerstvolgende dag en belangrijke momenten */
+const MOMENTS = [
+  ["do 22 okt","10:35","KL 591 Amsterdam → Johannesburg","Landing 21:20 · online inchecken vanaf wo 21 okt 04:35 · om 08:30 op Schiphol","2026-10-22"],
+  ["do 29 okt","10:55","5Z 971 Hoedspruit → George","Landing 13:20 · online inchecken vanaf wo 28 okt 10:55 · om 09:30 op de luchthaven","2026-10-29"],
+  ["do 12 nov","00:30","KL 598 Kaapstad → Amsterdam","Landing 11:15 · online inchecken vanaf di 10 nov 18:30 · transfer wo 11 nov om 21:00","2026-11-11"]
+];
+(function(){
+  document.getElementById("moments").innerHTML=MOMENTS.map(m=>`
+    <li><span class="md">${esc(m[0])}${m[1]?`<br>${esc(m[1])}`:""}</span>
+    <a href="#dag-${m[4]}"><span class="mt">${esc(m[2])}<small>${esc(m[3])}</small></span></a></li>`).join("");
+  const el=document.getElementById("nextCard");
+  const start=parse(TRIP[0].d), end=parse(TRIP[TRIP.length-1].d);
+  let x, cap;
+  if(today<start){
+    x=DAYS.find(d=>parse(d.d)>=today)||TRIP[0];
+    const n=Math.round((parse(x.d)-today)/864e5), toStart=Math.round((start-today)/864e5);
+    const when=n===0?"Vandaag":n===1?"Morgen":`Over ${n} dagen`;
+    cap=x.pre?`${when} · nog ${toStart} ${toStart===1?"dag":"dagen"} tot vertrek`:(toStart===1?"Morgen vertrekken we":`Over ${toStart} dagen vertrekken we`);
+  }
+  else if(today<=end){ x=TRIP.find(d=>d.d===todayISO)||TRIP[0]; cap=`Vandaag · dag ${TRIP.indexOf(x)+1} van ${TRIP.length}`; }
+  else { x=TRIP[TRIP.length-1]; cap="De reis zit erop"; }
+  const GENERIC=/^(Ontbijt|Lunch|Diner|Ontbijt en uitchecken|Vroeg ontbijt en uitchecken|Uitchecken|Middag vrij)$/;
+  const keyItems=d=>{const k=d.items.filter(it=>!GENERIC.test(it[1])); return (k.length?k:d.items).slice(0,4);};
+  const li=d=>keyItems(d).map(it=>`<li><span class="tm">${esc(it[0]||"")}</span><span class="tx">${esc(it[1])}</span></li>`).join("");
+  const head=d=>{const t=parse(d.d); return `${DOW[t.getDay()]} ${t.getDate()} ${MONTHS[t.getMonth()]} · ${esc(d.where)}${d.sleep?` · slapen: ${esc(d.sleep)}`:""}${REACH[d.d]?`<div class="reachline">${reachTag(d.d)}</div>`:""}`;};
+  const nxt=DAYS[DAYS.indexOf(x)+1];
+  el.innerHTML=`<div class="cap">${esc(cap)}</div>
+    <h3>${esc(x.title)}</h3>
+    <div class="where">${head(x)}</div>
+    <ul class="items">${li(x)}</ul>
+    <a class="go" href="#dag-${x.d}">Bekijk deze dag</a>`;
+})();
+
+/* Pagina's: één tegelijk tonen, knoppen bovenin */
+(function(){
+  const pages=[...document.querySelectorAll(".page")];
+  const tabs=[...document.querySelectorAll("nav.top a")];
+  function go(id, smooth){
+    const el=id&&document.getElementById(id); if(!el) return false;
+    const page=el.classList.contains("page")?el:el.closest(".page"); if(!page) return false;
+    pages.forEach(p=>p.hidden=p!==page);
+    tabs.forEach(a=>{const on=a.getAttribute("href")==="#"+page.id; a.classList.toggle("on",on); if(on) a.scrollIntoView({block:"nearest",inline:"center"});});
+    const more=el.classList.contains("day")?el.querySelector(".more[hidden]"):null; if(more){more.hidden=false; const t=el.querySelector(".toggle"); if(t){t.textContent="Verberg planning ▴";t.setAttribute("aria-expanded","true");}}
+    if(el===page) window.scrollTo(0,0); else el.scrollIntoView({block:"start",behavior:smooth?"smooth":"auto"});
+    return true;
+  }
+  document.addEventListener("click",e=>{
+    const a=e.target.closest('a[href^="#"]'); if(!a) return;
+    if(go(a.getAttribute("href").slice(1), false)) e.preventDefault();
+  });
+  if(!go((location.hash||"").slice(1))) go("samenvatting");
+})();
+</script>
+
+</body>
+</html>
